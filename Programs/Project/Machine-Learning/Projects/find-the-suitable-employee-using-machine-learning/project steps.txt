@@ -1,0 +1,7 @@
+Step1:import docx2txt and sklearn package
+step2:load and read docx file
+step3:load and read txt file
+step4:combine the two in the list
+step5:train the algoritham
+step6:test the algoritham
+step7:result

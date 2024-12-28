@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p>Finding HTML Elements by Class Name.</p>
+<p class="intro">Hello World!</p>
+<p class="intro">method.</p>
+<p id="demo"></p>
+
+<script>
+const x = document.getElementsByClassName("intro");
+document.getElementById("demo").innerHTML = x[0].innerHTML;
+//innerHTML = x[0].innerHTML;  -> select instance -> output is <p class="intro">Hello World!</p>
+//queryselector("p:lasst-child") -> select the last child
+</script>
+</body>
+</html>

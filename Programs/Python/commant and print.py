@@ -1,0 +1,2 @@
+#input values
+print("hello")

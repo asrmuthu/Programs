@@ -1,0 +1,14 @@
+
+/* descendant or child*/
+/* h1{
+   text-decoration: line-through;
+    color: blue ;
+} */
+
+.before_after::before{
+    content: 'contant add before';
+}
+
+.before_after::after{
+    content: 'contant add after';
+}

@@ -1,0 +1,39 @@
+*{
+    text-align: center;
+}
+.heading{
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    color: green;
+    text-decoration: underline;
+    border: 1px solid black;
+}
+
+.btn{
+    font-size: 20px;
+    margin-left: 10vh;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding: 5px 15px; 
+}
+
+.btn:hover{
+    background-color: red;
+    color: white;
+
+}
+
+.btn1{
+    font-size: 20px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding: 5px 15px;
+    border: 1px solid black; 
+}
+
+.btn1:hover{
+    background-color: green;
+    color: white;
+
+}

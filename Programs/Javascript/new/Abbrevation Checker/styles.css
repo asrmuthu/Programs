@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  --selection: #e9711c;
+  --white: #fff;
+  --black: #000;
+  --seashell: #fff5ee;
+  --textColor: #222;
+  --dragDropHighlight: #b9b9b9;
+  --svgImageSymbol: #979797;
+  --liBg: #ededed;
+  --highlightYellow: #fefbc8;
+  --highlightRed: #dcd89e;
+  --dropNotAllowedHighlight: #feb4bf;
+  --dropNotAllowedBorderHighlight: #feb5c0;
+  --grey: #d6d3d4;
+  --link: #007b95;
+}
+.abbrevationchecker-container {
+  background: var(--white);
+  box-shadow: 0 -2px 4px 0 rgb(0 0 0 / 20%);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+  height: 240px;
+}
+
+.abbrevationchecker-container .checker-container {
+  overflow-y: hidden;
+  position: relative;
+}
+.abbrevationchecker-container .abbrevationchecker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.abbrevationchecker-container .header_heading {
+  font-family: OpenSans-Bold;
+  font-size: 14px;
+  color: var(--textColor);
+  margin: 0 0 0 4%;
+  width: 12%;
+}
+
+.abbrevationchecker-container .abbrevationchecker-header .abbrevation-modified {
+  font-weight: 400;
+  width: 85%;
+  font-family: OpenSans-Regular;
+  font-size: 13px;
+  color: #2091da;
+  padding-left: 7px;
+  cursor: pointer;
+}
+
+.abbrevationchecker-container .acdrag-drop-header {
+  display: flex;
+  justify-content: center;
+  height: 0px;
+}
+
+.abbrevationchecker-container .acdrag-drop-symbol {
+  top: 4px;
+  color: var(--svgImageSymbol);
+  width: 18px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.acdrag-drop-header:hover .acdrag-drop-symbol {
+  color: #000000;
+  fill: #000000;
+}
+
+.acdrag-drop-symbol:hover #Unit-Checker {
+  color: #000000;
+  opacity: 1;
+}
+.abbrevationchecker-container .header_close {
+  width: 3%;
+}
+
+.abbrevationchecker-container .header_symbol {
+  width: 28.3px;
+  height: 28.3px;
+  color: #212121;
+}
+
+.abbrevationchecker-container .header_text {
+  padding: 0;
+  font-family: Roboto-Regular;
+  font-size: 13px;
+  color: #666666;
+  text-transform: capitalize;
+}
+.abbrevationchecker-container .abbrevationchecker-body-container {
+  margin-left: 4%;
+  /*max-height: 25rem;*/
+}
+.abbrevationchecker-container .abbrevationchecker-items-heading {
+  display: flex;
+}
+
+.abbrevationchecker-container .abbrevationchecker-items-heading .ac_text {
+  font-family: OpenSans-SemiBold;
+  font-size: 12px;
+  margin-top: 7px;
+  margin-bottom: -5px;
+  flex-basis: 33%;
+  font-family: OpenSans-SemiBold;
+  font-size: 12px;
+  color: #222222;
+  z-index: 1;
+}
+
+.abbrevationchecker-container .abbrevationchecker-items-container {
+  width: 100%;
+  display: flex;
+  height: 140px;
+  overflow-y: scroll;
+  margin-top: 10px;
+}
+.abbrevationchecker-container .ac-items-container {
+  display: flex;
+  flex-basis: 100%;
+}
+.abbrevationchecker-container .ac-item {
+  flex-basis: 30.8%;
+}
+
+.abbrevationchecker-container .ac-item-standard .ac-item1{
+  position: absolute;
+  top: 0px;
+  padding-top: 59px;
+  background: #ededed;
+  left: 860px;
+  width: 28%;
+  height: 250px;
+}
+.abbrevationchecker-container .ac-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /*height: calc(100% - 30px);*/
+}
+.abbrevationchecker-container .ac-item ul li {
+  position: relative;
+  background: var(--liBg);
+  border: 1px solid var(--liBg);
+  border-radius: 3px;
+  font-family: OpenSans-Regular;
+  font-size: 12px;
+  color: var(--black);
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  width: 96%;
+  height: 32px;
+}
+
+.abbrevationchecker-container .ac-item-standard ul li {
+  position: relative;
+  background: white;
+  border: 1px solid var(--liBg);
+  border-radius: 3px;
+  font-family: OpenSans-Regular;
+  font-size: 12px;
+  color: var(--black);
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  width: 94%;
+  height: 32px;
+  margin-left: 10px;
+}
+
+.abbrevationchecker-container .ac-item ul li .text {
+  width: 80%;
+  display: inline-block;
+  padding-left: 5px;
+}
+
+.abbrevationchecker-container .ac-item ul li .grouped-li {
+  width: 100%;
+  align-items: center;
+  display: flex;
+}
+
+.abbrevationchecker-container .ac-item-standard ul li .grouped-li {
+  width: 100%;
+  align-items: center;
+  display: flex;
+}
+
+.abbrevationchecker-container .draggable_ele:hover,
+.abbrevationchecker-container .draggable_ele.selected {
+  background: var(--seashell);
+  border: 1px solid var(--selection);
+  border-radius: 3px;
+}
+
+.abbrevationchecker-container .ac-item ul li:hover .ac_symbol,
+.abbrevationchecker-container .ac-item ul li.selected .ac_symbol {
+  color: var(--black);
+  opacity: 1;
+}
+
+.abbrevationchecker-container .ac-item-standard ul li:hover .ac_symbol {
+  color: var(--black);
+  opacity: 1;
+}
+
+.abbrevationchecker-container .ac-item .ac_symbol {
+  opacity: 0.5;
+  color: var(--svgImageSymbol);
+  height: 12px;
+  margin: 6px;
+}
+
+
+.abbrevationchecker-container .ac-item-tab .loading {
+  min-height: 130px;
+  margin: 20px 0;
+  float: left;
+}
+.abbrevationchecker-container .acresizer {
+  cursor: row-resize;
+  padding-bottom: 5px;
+  width: 100%;
+  position: absolute;
+}
+
+.abbrevationchecker-container .disabled {
+  pointer-events: none;
+  opacity: 0.3;
+  cursor: default;
+}
+
+.abbrevationchecker-container li.selected {
+  background: var(--seashell) !important;
+  border: 1px solid var(--selection);
+  border-radius: 3px;
+}
+
+/*Action area - Start*/
+
+/*Highlight - Ends*/
+
+.close {
+  cursor: pointer;
+}
+.show {
+  display: block;
+}
+/* .hide{
+      display:none !important;
+    } */
+.hidden {
+  visibility: hidden;
+}
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+.abbrevation-action-container {
+  height: 36px;
+  width: 100%;
+  border-top: 1px solid #dbdbdb;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+
+.abbrevation-action-btn {
+  background: #e9711c;
+  border: 2px solid #e9711c;
+  width: 121px;
+  height: 30px;
+  opacity: 0.9;
+  font-family: OpenSans-Bold;
+  font-size: 12px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.abbrevationchecker-container .ac-item-standard .ac_symbol {
+  opacity: 0.5;
+  color: var(--svgImageSymbol);
+  height: 12px;
+  margin: 6px;
+}
+
+.abbrevationchecker-container .ac-item-standard ul li .text {
+  width: 80%;
+  display: inline-block;
+  padding-left: 5px;
+}

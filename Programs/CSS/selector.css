@@ -1,0 +1,20 @@
+/* descendant or child*/
+#grand-father .p{
+    color: red;
+}
+
+/* child */
+#grand-father > .p{
+    color: blue;
+}
+
+/* first sibling */
+#h1_1 + .p{
+    color: brown;
+}
+
+
+/* all sibling */
+#h1_1 ~ .p{
+    color: green;
+}

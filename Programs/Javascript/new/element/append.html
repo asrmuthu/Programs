@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="p1">This is a paragraph.</p>
+    <script>
+        const para = document.createElement("p");
+        para.textContent = "This is muthu.";
+        document.getElementById("p1").appendChild(para);
+
+        // Creating a section element and appending a paragraph inside it
+        const section = document.createElement("section");
+        const paraInSection = document.createElement("p");
+        paraInSection.textContent = "section para";
+        section.appendChild(paraInSection);
+        document.body.appendChild(section); // Append the section to the body
+    </script>
+</body>
+</html>

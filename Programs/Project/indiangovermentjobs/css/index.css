@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+ .fa {
+  font-family: 'Times New Roman', Times, serif; /* Specify Times New Roman or fallback to Times or Serif */
+}
+ 
+ .body_start {
+    /*width: 85%;*/
+    margin: 15px auto 15px auto;
+    flex-direction: column;
+  }
+  
+   @media only screen and (max-width: 600px) {
+    /* CSS rules for mobile devices */
+    /* Modify styles to fit smaller screens */
+    .body_start {
+      width: 98%; /* Adjust width for mobile */
+   
+    } 
+    #statelist1{
+      width: 100%;
+    } 
+  #statelist {
+    display: none; /* Hide the section */
+  }
+  .p1{
+    font-size: 18px;
+  }
+  .tab2, tab1, linktable{
+      width: 90%;
+  }
+  #joblist td, #result_admitcard td, #joblist a, #result_admitcard a {
+    font-weight: bold;
+    font-size: 13px;
+  }
+  #joblist, #result_admitcard{
+    border-collapse: collapse;
+  }
+  .select{
+    margin-left: 8px;
+  }
+  .linktable, .tab2, .tab1{
+    margin-left: 1%;
+  }
+  h1{
+    font-size: 25px;
+  }
+  #header_div a{
+    padding: 11px;
+  }
+  h5{
+    font-size: 7.5px;
+    margin: 1px;
+  }
+  #joinsocial a{
+    margin-top: 7px;
+    width: 175px;
+    margin-right: 1px;
+    display: block;
+    text-transform: none;
+    background-color: violet;
+  }
+  #share-buttons{
+  background-color: bisque;
+  width: 45%;
+}
+img{
+  width: 350px;
+  height: 300px;
+  margin-top: 10px;
+}
+  /* #joinsocial{
+      margin-top:10px;
+  }
+  #joinsocial a{
+    margin-right: 5px;
+  } */
+  /* #joinsocial img{
+    width: 170px;
+    height: 50px;
+  } */
+  /* .contact{
+    font-size: 25px;
+} */
+  Iframe{
+    height: 2450px;
+  }
+}
+  
+  /* Media query for desktop devices */
+  @media only screen and (min-width: 601px) {
+    /* CSS rules for desktop devices */
+    /* Modify styles to fit larger screens */
+    .body_start {
+      width: 85%; /* Adjust width for desktop */
+      margin: 15px auto 15px auto;
+      flex-direction: column;
+    }
+    #searchBox {
+      margin-left: 40%; /* Adjust margin for desktop */
+    }
+    #statelist, #statelist1{
+        width:100%;
+    }
+    #joblist{
+        width:100%;
+    }
+
+    h4{
+    font-size: 25px;
+  }
+  .tab2, .tab1, .linktable{
+      width: 60%;
+  }
+  .select{
+    margin-left: 420px;
+  }
+  .linktable, .tab2, .tab1{
+    margin-left: 5%;
+    font-weight: bold;
+  }
+  h1{
+    font-size: 30px;
+  }
+  #header_div a{
+    padding: 20px 20px;
+  }
+  h5{
+    font-size: 13px;
+    margin: 4px 0px 0px 10px;
+  }
+  a:hover{
+    text-transform: uppercase;
+  }
+  #state_div{
+    margin-left: 5px;
+  }
+  #joinsocial{
+    margin-left:30%;
+    margin-top:10px;
+    align-items: center;
+  }
+  #joinsocial a{
+    width: fit-content;
+    margin-right: 10px;
+    display: block;
+    text-transform: none; 
+    background-color: violet;
+  }
+  #share-buttons{
+  background-color: bisque;
+  width: fit-content;
+}
+img{
+  width: 730px;
+  height: 500px;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+  Iframe{
+    height: 1468px;
+  }
+  /* #joinsocial{
+    margin-top:10px;
+}
+  #joinsocial a{
+    margin-right: 10px;
+  }
+  #social{
+    margin-left: 12%;
+  } */
+    /* #result_admitcard{
+       width:26%;
+    } */
+    /* Add more styles for desktop if needed */
+  }
+ 
+
+#header_div{
+    background: #000000;
+    overflow: auto;
+}
+#state_div{
+    overflow: auto;
+}
+#state_div li{
+  margin-right: 2px; 
+}
+#state_div a{
+  margin-right: 2px;
+  display: block;
+  font-family: Arial;
+  background-color: red;
+  color: white;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 2px;
+  border-radius: 40%;
+  text-align: center;
+}
+#state_div a:hover{
+  background-color: blue;
+}
+#navbar, #statebar, #social{
+    padding: 0%;
+    list-style: none;
+}
+li{
+    float: left;
+}
+#header_div a{
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    font-family: Arial;
+    color: #f2f2f2;
+    text-align: center;
+    font-size: 18px;
+}
+#joinsocial{
+  overflow: auto;
+}
+#joinsocial i{
+  font-size:30px;
+}
+#joinsocial b{
+  font-size: 20px;
+}
+#joinsocial a:hover{
+  background: yellowgreen;
+}
+#header_div a:hover{
+    background: purple;
+    transition: 0.5s;
+    text-decoration: underline;
+ }
+ .highlight {
+  background-color: yellow;
+  font-weight: bold;
+  font-size: 30px;
+}
+#searchBox{
+  float: left;
+  margin-left: 40%;
+  margin-bottom: 20px;
+  font-size: 20px; 
+  height: 40px;
+  display: flex; 
+  flex-flow: row nowrap;
+}
+#input{
+ /* font-size: 20px; */
+ width: fit-content;
+}
+
+#searchBtn:hover{
+  background: greenyellow;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#searchBtn{
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+/* input{
+  font-size: 20px;
+} */
+ h4{  
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 3px;
+  margin-left: 8px;
+}
+
+.section-p1{
+  padding: 40px 80px;
+}
+.section-m1{
+ margin: 40px 0;
+}
+
+.select{
+    margin-top: 10px;
+    font-weight: bold;
+    background-color: yellow ;
+    color: red;
+    font-size: 25px;
+}
+#choosestate{
+  font-size: 18px;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+.option{
+  font-size: 20px;
+  background-color: lightblue ;
+  cursor: pointer;
+}
+#statelist, #statelist1{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+  font-weight: bold;
+  text-align: center;
+}
+
+#statelist td, #statelist1 td{
+  border : 1px solid #465b52;
+  padding : 8px;
+}
+#statelist a, #statelist1 a{
+  font-size: 18px;
+}
+#statelist tr:nth-child(odd), #statelist1 tr:nth-child(odd){
+  background-color: #f2f2f2;
+}
+
+h3{
+  font-weight: bold;
+  font-size: 23px;
+  color: blue;
+  margin-top: 10px;
+}
+
+
+/* #statelist td:hover {
+  background: greenyellow;
+  transition: 0.5s;
+  text-transform: uppercase;
+} */
+h1{
+  text-align: center;
+  font-size: 30px;
+  background-color: darkorange;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0px;
+  margin: 10px 55px;
+}
+
+/* h1{
+  text-align: center;
+  margin: 15px auto 15px auto;
+  background-color: bisque;
+  color: purple;
+  display: table; 
+} */
+
+.joblist_top{
+  margin-top: 10px;
+}
+#joblist{
+  float: left;
+  font-weight: bold;
+  margin-top: 1px;
+  text-align: center;
+}
+#result_admitcard{
+  font-weight: bold;
+  margin-top:20px;
+}
+#joblist tr .post_header, #result_admitcard tr .post_header{
+  text-align: center;
+  background-color: lightgreen;
+  color: #000000;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+#joblist th, #result_admitcard th, #seca th {
+  border : 1px solid blue;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: cadetblue;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.tab1 th{
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.tab1 td{
+  font-size: 18px;
+  text-align: left;
+}
+
+
+#joblist td, #result_admitcard td, .tab1 td {
+  border : 1px solid #465b52;
+  padding : 8px;
+  /* font-weight: bold; */
+}
+
+#joblist tr:nth-child(even), #result_admitcard tr:nth-child(even), .tab1 tr:nth-child(odd){
+  background-color: #ddd;
+}
+
+#joblist tr:nth-child(odd), #result_admitcard tr:nth-child(odd), .tab1 tr:nth-child(even){
+  background-color: white;
+}
+
+#joblist a,#result_admitcard a, #seca a, .statewise a{
+  color: red;
+  font-weight: bold;
+}
+
+#seca{
+  width: 100%;
+}
+a:hover{
+  background: lightgreen;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+
+h2{
+  font-size: 23px;
+  text-decoration: underline;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  color: brown;
+}
+#title{
+  color: blue;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.tab2 td, .linktable td{
+  border : 1px solid #465b52;
+  padding: 5px;
+  font-size: 17px;
+}
+
+
+.tab2 td:first-child, .linktable td:first-child{
+  color: blue;
+  font-weight: bold;
+  font-size: 20px;
+  width: 55%;
+}
+.copyright{
+  float: left;
+  background-color: darkgrey;
+  width: 100%;
+  padding: 10px;
+  margin-top: 25px;
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+.statewise{
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.contact{
+  float: left;
+  margin-top: 25px;
+  font-size: 20px;
+}
+.statewise a{
+  font-size: 20px;
+}
+Strong{
+  font-weight: bold;
+}
+
+#share-buttons i{
+  font-size:30px; /* Adjust the size as needed */
+  margin-top: 15px;
+}
+
+#share-buttons a {
+  display: inline-block;
+  width: 40px; /* Adjust width if needed */
+  height: 50px; /* Adjust height if needed */
+  margin-left: 1px;
+  border-radius: 30%;
+  line-height: 50px; /* Match height for vertical centering */
+}
+
+#share-buttons a:hover {
+  background-color: green; /* Darker blue color on hover */
+}
+
+.roll{
+  background-color: aqua;
+  color: red;
+  overflow: hidden;
+  position: absolute;
+  animation: my-animation 24s linear infinite;
+}
+
+/* #Iframe{
+  height: 650px;
+} */
+
+/* .hidden {
+  display: none;
+} */

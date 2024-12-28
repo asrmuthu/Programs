@@ -1,0 +1,17 @@
+looking for a senior developer with 3+ years in XSLT.
+
+Developer who can work on the XML based technologies
+
+like XSLT, XPath, XML Schema.
+LANGUAGES  AND SKILS:  XML, XSLT, CSL, XSL-FO, XHTML,XPP.XML,XSLT,HTML5,XPP.AGILE METHODOLOGY    
+
+Developer should be able to do the data analysis and create scripts in XSLT.
+
+Developer should have fair understanding of DTD and XML schema.
+We created a tool to support clients and sps production team. The tool is mainly working on xml to client xml, xml to pdf, Docx to pdf, Html to Pdf.XML to PDF conversion using XSLT and XPP.Springer, Wiley.
+
+Past experience of creating automation through XSLT would be added advantage.
+
+Experience in e-publishing domain would be preferable-
+
+Anna University ,State Board  

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap:https://www.indiangovermentjobs.com/sitemap.xml
+Disallow: /ind.html
+Disallow: *.pdf
+Disallow: *.PDF
+Disallow: /common/

@@ -1,0 +1,63 @@
+Javascript:
+1)document - document.createElement("div");   - create div in document
+2)append   - document.body.append(newElement1); - add div in body
+3)innerText -> text
+4)setAttribute("class","task"); -> attribute and value add
+5)alert -> alert box
+
+Javascript:
+1)createTextNode("This is new.")   - > create text
+2)getElementById -> get id in element
+3)Removechild -> 
+INPUT HTML:
+<div id="mylinks">
+  This is my <b>link collection</b>:
+  <ul>
+    <li><a href="www.borland.com">Bye bye <b>Borland</b> </a></li>
+    <li><a href="www.microfocus.com">Welcome to <b>Micro Focus</b></a></li>
+  </ul>
+</div>
+5)textContents
+Div- This is my link collection:
+6)innerText
+Div-This is my link collection:Bye bye Borland Welcome to Micro Focus
+7)innerHtml
+This is my <b>link collection</b>:
+<ul> 
+  <li><a href="www.borland.com">Bye bye <b>Borland</b></a></li>
+  <li><a href="www.microfocus.com">Welcome to <b>Micro Focus</b></a></li> 
+</ul>
+
+Javascript:
+<p name="x" class="intro" type="a" value="Cats">
+1.getElementsByName -> x
+2.getElementsByTagName -> input
+3.getElementsByClassName ->intro
+4.querySelector -> select first instance using name or id or class
+5.querySelectorAll -> select all instance using name or id or class
+
+Javascript:
+1.Prompt - Get the value
+2.console.log -> Display in console
+3.document.write ->print the word
+4.String to number ->
+a=”125”   
+a=Number(a);
+5.variables:
+Var -> function scope and widow object
+Let -> block scope
+Const -> can not change
+
+Javascript:
+1.Arithmetic Operators -> maths -> x =a+b;
+2.Assignment Operators ->x += y ->x = x + y
+3.Comparison Operators ->==, !=, >=.
+4.Logical Operators -> &&,||,!.
+5.Type Operators ->typeof
+
+
+
+
+
+
+

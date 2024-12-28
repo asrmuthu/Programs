@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>usenamedisplay</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p>
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required id="inputValue"></p><p>
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required></p>
+      <button type="submit" onclick="loginbtn()">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember
+            </label>
+      <p><a href="#">Forgot password?</a></p>
+      <p id="loading"></p>
+    </div>      
+      <script src="index.js"></script>
+  </body>
+</html>

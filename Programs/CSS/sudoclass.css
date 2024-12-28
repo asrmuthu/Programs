@@ -1,0 +1,35 @@
+a{
+    background-color: grey;
+}
+a:link{
+    color: coral;
+}
+
+a:visited{
+    color: aqua;
+}
+
+/* a:hover{
+    font-weight: bold;
+    color: chartreuse;
+} */
+/* 
+a:active{
+    font-weight: bold;
+    color: chartreuse; 
+
+} */
+
+/* sudo elements */
+h1::first-letter {
+ font-size: 38px;
+ color: red; 
+}
+/* 
+h1::after{
+    content: 'contant added after';
+}
+
+h1::before{
+    content: 'contant added before'; */
+}
