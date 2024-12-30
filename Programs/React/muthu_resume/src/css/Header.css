@@ -1,0 +1,61 @@
+.App-header {
+  background-color: rgb(217, 232, 237);
+  width: 22%;
+  height: 80ch;
+  display: flex;
+  justify-content: center;
+}
+
+.hgroup {
+  margin: 60px 0;
+  padding: 10px;
+  background-color: white;
+  width: 80%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.muthu_image {
+  width: 35%;
+  height: 20%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: -60px auto 0 auto;
+}
+
+.App-header h1 {
+  color: #0d8155;
+  margin: 10px;
+  text-align: center;
+}
+
+.App-header h2 {
+  margin: 0px;
+  text-align: center;
+}
+
+.App-header .context {
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.App-header .social{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+.App-header .social a{
+  margin: 0 10px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+}
+
+.contact-info svg {
+  margin-right: 10px; 
+}
