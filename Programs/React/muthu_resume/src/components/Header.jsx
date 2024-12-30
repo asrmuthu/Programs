@@ -1,6 +1,5 @@
 import React from "react";
 import muthu_image from "../muthu_image.jpg";
-import "../css/Header.css";
 import { GrLocation } from "react-icons/gr";
 import { FaMobileRetro } from "react-icons/fa6";
 import { AiFillMail } from "react-icons/ai";
@@ -10,7 +9,7 @@ import { AiFillGithub } from "react-icons/ai";
 const Header = () => {
 return (
     <div>
-        <header className="App-header">
+        <header className="header">
             <hgroup className="hgroup">
                 <img src={muthu_image} className="muthu_image" alt="logo" />
                 <h1>Muthupandi Raj</h1>
