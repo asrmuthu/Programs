@@ -11,9 +11,11 @@ function App() {
        {width < 768 ? <FaMobileAlt />
                 : width < 992 ? <FaTabletAlt />
                     : <FaLaptop />}
-      <div className="App-container" style={{ display: width < 900 ? 'block' : 'flex' }}>
+      <div className="App-container" style={{ display: width < 992 ? 'block' : 'flex' }}>
         <Header />
-        <Details />
+        <div style={{ overflowY: 'scroll', height: 'calc(100vh - 60px)'}}>
+          <Details />
+        </div>
       </div>
     </div>
   );
