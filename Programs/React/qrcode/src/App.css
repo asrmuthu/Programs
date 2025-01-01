@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+.app-container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1{
+  font-weight: 600;
+  color: rgb(18, 18, 154);
+  font-size: 18px;
+  padding: 10px 0;
+  text-decoration: underline;
+}
+img{
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+}
+
+label{
+  display: block;
+  color: rgb(154, 18, 118);
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+input[type="text"] {
+  padding: 12px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 16px;
+  border: 1.5px solid rgb(18, 18, 147);
+}
+
+button{
+  padding: 15px 20px;
+  font-size: 18px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.inputlabel{
+  margin-top: 40px;
+}
+.genarete_button{
+  background-color: #3498db;
+}
+.genarete_button:hover{
+  background-color: #215476;
+}
+
+.download_button{
+  background-color: #1d914e;
+  margin-top: 20px;
+}
+.download_button:hover{
+  background-color: #176938;
+}
+
+.footer{
+  margin-top: 30px;
+}
+.footer a{
+  text-decoration: none;
+}
