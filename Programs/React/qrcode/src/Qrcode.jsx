@@ -58,7 +58,7 @@ const Qrcode = () => {
       )}
 
       <div>
-        <label htmlFor="dataInput" className="inputlabel">URL or Any Data for QR code genaration</label>
+        <label htmlFor="dataInput" className="inputlabel">URL or Any text for QR code genaration</label>
         <input type="text" value={qr} id="dataInput" onChange={(e) => setQr(e.target.value)}/>
         {/* <label htmlFor="sizeInput" className="inputlabel">Image size</label>
         <input type="text" id="sizeInput" value={size} onChange={(e) => setSize(e.target.value)}/> */}
