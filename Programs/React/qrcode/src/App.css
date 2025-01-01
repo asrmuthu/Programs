@@ -16,8 +16,8 @@ h1{
   font-weight: 600;
   color: rgb(18, 18, 154);
   font-size: 18px;
-  border: 1px solid #ccc;
   padding: 10px 0;
+  text-decoration: underline;
 }
 img{
   padding: 5px;
