@@ -55,7 +55,6 @@ function App() {
       if (data.cod === "404"){
          setcityNotFound(true);
          setloading(false);
-
           return;
       }
       setTemp(Math.floor(data.main.temp));
