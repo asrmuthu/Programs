@@ -24,7 +24,7 @@ function App() {
   const [text, setText] = useState('chennai');
   const [cityNotFound, setcityNotFound] = useState(false);
   const [loading, setloading] = useState(false);
-  const [error, setError] = useState(null);
+  const [errors, setErrors] = useState(null);
   const weatherIconMap = {
     "01d":TiWeatherSunny,
     "01n":TiWeatherSunny,
@@ -53,9 +53,9 @@ function App() {
       let response = await fetch(url);
       let data = await response.json();
       if (data.cod === "404"){
-        //  alert("City Not Found");
          setcityNotFound(true);
          setloading(false);
+
           return;
       }
       setTemp(Math.floor(data.main.temp));
@@ -71,7 +71,7 @@ function App() {
     }
     catch(error) {
       console.error("error", error.message);
-      setError("An error occured while fetching data");
+      setErrors("An error occured while fetching data");
     }
     finally {
       setloading(false);
@@ -105,7 +105,7 @@ function App() {
           </div>
       </div>
       {loading  && <div className='loading'>Loading ...</div>}
-      {error && <div className='error'>{error}</div>}
+      {errors && <div className='error'>{errors}</div>}
       {cityNotFound && <div className='notfound'>City Not Found</div>}
       {!loading && !cityNotFound && <WeatherReport 
       icon={icon}
