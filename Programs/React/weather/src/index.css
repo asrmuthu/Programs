@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #535c68;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}   
+
+.container{
+    width: 350px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inputcontainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border: 2px solid #70e6f3;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.cityInput{
+    flex: 1;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+}
+.searchIcon{
+    padding: 7px;
+    height: 30px;
+    cursor: pointer;
+}
+.image{
+    object-fit: contain;
+}
