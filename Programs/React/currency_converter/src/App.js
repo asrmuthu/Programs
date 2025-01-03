@@ -10,18 +10,23 @@ function App() {
   const [tocurrency, setToCurrency] = useState("INR");
   const [exchangeRate, setExchangeRate] = useState(null);
   const [currencies, setCurrencies] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const date = new Date();
 
   useEffect(() => {
+    setLoading(true);
     const getExchangeRate = async () => {
       try {
-        let url = `https://api.exchangerate-api.com/v4/latest/${fromcurrency}`;
+        let url = `https://api.exchangerate-api.com/v4/latest/${fromcurrency}`;//https://api.exchangerate-api.com/v4/latest/USD
         const response = await axios.get(url);
-        setCurrencies(Object.keys(response.data.rates));
         setExchangeRate(response.data.rates[tocurrency]);
+        setCurrencies(Object.keys(response.data.rates));
       } catch (error) {
-        console.log("Error in fetching exchange rate", error);
+        console.log("Error in fetching exchange rate", error.message);
+        setError("Error in fetching data(Network Error)."); 
       }
+      setLoading(false);
     };
     getExchangeRate();
   }, [fromcurrency, tocurrency]);
@@ -36,8 +41,11 @@ function App() {
       <div className="logo">
         <MdCurrencyExchange />
       </div>
-
-      <div className="data">
+      {loading  && <div className='loading'>Loading ...</div>}
+      {error && <div className='error'>{error}. Please contact <a href="mailto:asrmuthu57@gmail.com">
+                        asrmuthu57@gmail.com
+                    </a></div>}
+      {!error && !loading && <div className="data">
         <h2>Currency Converter</h2>
         <div className="input">
           <div className="amount">
@@ -57,9 +65,9 @@ function App() {
               value={fromcurrency}
               onChange={(e) => setFromCurrency(e.target.value)}
             >
-              {currencies.map((currency) => (
-                <option key={currency} value={currency}>
-                  {currency}
+              {currencies.map((index) => (
+                <option key={index} value={index}>
+                  {index}
                 </option>
               ))}
             </select>
@@ -71,28 +79,29 @@ function App() {
               value={tocurrency}
               onChange={(e) => setToCurrency(e.target.value)}
             >
-              {currencies.map((currency) => (
-                <option key={currency} value={currency}>
-                  {currency}
+              {currencies.map((index) => (
+                <option key={index} value={index}>
+                  {index}
                 </option>
               ))}
             </select>
           </div>
           {amount > 0 && exchangeRate !== null && !isNaN(amount * exchangeRate) && (
             <p>
-             <span style={{color: "green"}}>{amount} </span> {fromcurrency} is Equal to {' '}
-             <span style={{color: "green"}}>{(amount * exchangeRate).toFixed(3)}</span>{' '}{tocurrency} <br /><br />
-             1 {fromcurrency} = {exchangeRate.toFixed(2)} {tocurrency}
-             {" "} <br/><span style={{fontSize: "14px"}}>on {" "}
-              {`${date.toLocaleDateString("en-US", {
-                weekday: "long",
-              })}, ${date.getDate()}-${
-                date.getMonth() + 1
-              }-${date.getFullYear()}`}</span>
+              <span style={{ color: "green" }}>{amount} </span> {fromcurrency} is Equal to{" "}
+              <span style={{ color: "green" }}>{(amount * exchangeRate).toFixed(3)}</span>{" "}
+              {tocurrency} <br /><br />
+              1 {fromcurrency} = {exchangeRate.toFixed(2)} {tocurrency}
+              {" "} <br /><span style={{ fontSize: "14px" }}>on {" "}
+                {`${date.toLocaleDateString("en-US", {
+                  weekday: "long",
+                })}, ${date.getDate()}-${
+                  date.getMonth() + 1
+                }-${date.getFullYear()}`}</span>
             </p>
           )}
         </div>
-      </div>
+      </div>}
     </div>
   );
 }
