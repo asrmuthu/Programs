@@ -18,7 +18,6 @@ function App() {
         let url = `https://api.exchangerate-api.com/v4/latest/${fromcurrency}`;
         const response = await axios.get(url);
         setCurrencies(Object.keys(response.data.rates));
-        setExchangeRate(response.data.rates);
         setExchangeRate(response.data.rates[tocurrency]);
       } catch (error) {
         console.log("Error in fetching exchange rate", error);
