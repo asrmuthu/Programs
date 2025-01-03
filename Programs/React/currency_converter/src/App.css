@@ -36,6 +36,8 @@ color: #ff6b6b;
 h2{
     margin: 10px;
     color: #2d3436;
+    border: 2px dashed #dbdb7f;
+    padding: 5px
   }
 label{
     font-size: 18px;
