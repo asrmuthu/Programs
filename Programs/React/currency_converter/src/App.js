@@ -8,53 +8,90 @@ function App() {
   const [amount, setAmount] = useState(1);
   const [fromcurrency, setFromCurrency] = useState("USD");
   const [tocurrency, setToCurrency] = useState("INR");
-  const [exchangeRate, setExchangeRate] = useState(82); // 1 USD = 82 INR
-useEffect(() => {
-  const getExchangeRate = async () => {
-    try{
-      let url =`https://api.exchangerate-api.com/v4/latest/${fromcurrency}`
-      const response = await axios.get(url);
-      console.log(response.data.rates);
-      console.log("response",response);
-      
-    }
-    catch(error){
-      console.log("Error in fetching exchange rate", error);
-    }
-  }
-})
+  const [exchangeRate, setExchangeRate] = useState(null);
+  const [currencies, setCurrencies] = useState([]);
+  const date = new Date();
 
-const handleAmount = (e) => {
-  const val = parseFloat(e.target.value);
-  setAmount(isNaN(val) ?  0 : val);
-}
+  useEffect(() => {
+    const getExchangeRate = async () => {
+      try {
+        let url = `https://api.exchangerate-api.com/v4/latest/${fromcurrency}`;
+        const response = await axios.get(url);
+        setCurrencies(Object.keys(response.data.rates));
+        setExchangeRate(response.data.rates);
+        setExchangeRate(response.data.rates[tocurrency]);
+      } catch (error) {
+        console.log("Error in fetching exchange rate", error);
+      }
+    };
+    getExchangeRate();
+  }, [fromcurrency, tocurrency]);
+
+  const handleAmount = (e) => {
+    const val = parseFloat(e.target.value);
+    setAmount(val);
+  };
 
   return (
     <div className="App">
       <div className="logo">
         <MdCurrencyExchange />
       </div>
-      
+
       <div className="data">
         <h2>Currency Converter</h2>
         <div className="input">
           <div className="amount">
             <label htmlFor="amount">Amount</label>
-            <input type="number" id="amount" className="textbox" value={amount} onChange={handleAmount}/>
+            <input
+              type="number"
+              id="amount"
+              className="textbox"
+              value={amount}
+              onChange={handleAmount}
+            />
           </div>
           <div className="from">
             <label htmlFor="from">From Currency</label>
-            <select id="from" value={fromcurrency}>
-              <option value="USD">{fromcurrency}</option>
+            <select
+              id="from"
+              value={fromcurrency}
+              onChange={(e) => setFromCurrency(e.target.value)}
+            >
+              {currencies.map((currency) => (
+                <option key={currency} value={currency}>
+                  {currency}
+                </option>
+              ))}
             </select>
           </div>
-          <div className="to" value={tocurrency}>
+          <div className="to">
             <label htmlFor="to">To Currency</label>
-            <select id="to">
-              <option value="INR">{tocurrency}</option>
+            <select
+              id="to"
+              value={tocurrency}
+              onChange={(e) => setToCurrency(e.target.value)}
+            >
+              {currencies.map((currency) => (
+                <option key={currency} value={currency}>
+                  {currency}
+                </option>
+              ))}
             </select>
           </div>
-          <p>{amount} {fromcurrency} is Equal to {exchangeRate} {tocurrency}</p>
+          {amount > 0 && exchangeRate !== null && !isNaN(amount * exchangeRate) && (
+            <p>
+             <span style={{color: "green"}}>{amount} </span> {fromcurrency} is Equal to {' '}
+             <span style={{color: "green"}}>{(amount * exchangeRate).toFixed(3)}</span>{' '}{tocurrency} <br /><br />
+             1 {fromcurrency} = {exchangeRate.toFixed(2)} {tocurrency}
+             {" "} <br/><span style={{fontSize: "14px"}}>on {" "}
+              {`${date.toLocaleDateString("en-US", {
+                weekday: "long",
+              })}, ${date.getDate()}-${
+                date.getMonth() + 1
+              }-${date.getFullYear()}`}</span>
+            </p>
+          )}
         </div>
       </div>
     </div>
