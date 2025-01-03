@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  margin:15px 0;
+  justify-content: center;
+}
+.App{
+  background-color: #95a5a6;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.logo svg{
+width: 160px;
+height: 160px;
+display: flex;
+margin: 0 auto;
+color: #ff6b6b;
+}
+.data{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h2{
+    margin: 10px;
+    color: #2d3436;
+    border: 2px dashed #dbdb7f;
+    padding: 5px
+  }
+label{
+    font-size: 18px;
+    padding: 2px;
+}
+  
+  .input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .textbox {
+    width: 200px;
+    padding: 5px;
+    border-radius: 3%;
+    border: none;
+    outline: none;
+  }
+
+  select {
+    width: 210px;
+    padding: 5px;
+    margin-top: 5px;
+    outline: none;
+  }
+
+  .amount, .from, .to {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  
+  p{
+    margin: 5px;
+    color: #2d3436;
+    font-weight: 600;
+    background-color: #fff;
+    padding: 10px;
+    font-size: 20px;
+  }
+  .loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-size: 30px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+ .error{
+  font-size: 18px;
+  color: #ff6b6b;
+  text-align: center;
+  margin-top: 30px;
+ }

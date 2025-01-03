@@ -70,7 +70,7 @@ function App() {
     }
     catch(error) {
       console.error("error", error.message);
-      setErrors("An error occured while fetching data");
+      setErrors("An error occured while fetching data", error.message);
     }
     finally {
       setloading(false);
