@@ -29,7 +29,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/newpost" element={<NewPost />} />
         <Route path="*" element={<Missing />} />
         <Route path="/postpage" element={<PostLayout />}>
           <Route index element={<PostPage />} />
