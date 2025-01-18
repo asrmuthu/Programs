@@ -23,7 +23,7 @@ function App() {
           <Route path="/ibps" element={<IBPS />} />
           <Route path="/upsc-cms" element={<UPSCCMS />} />
           <Route path="/neet-pg" element={<NEETPG />} />
-          <Route path='*' element={<Missing />} />
+          <Route path='*' element={<Home />} />
         </Routes>
       </Layout>
     </Router>

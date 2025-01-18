@@ -2,20 +2,73 @@
 
 
 *{
-  margin: 0;
-  padding: 0;
+  margin: 6px 15px;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
 }
 
-.App-header ul{
-    list-style-type: none;
-    display: flex;
-    background-color: black;
-    list-style-type: none;
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-li{
-    padding-left: 20px;
-    list-style-type: none;
+/* Flexbox for the Root Element */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure full height of viewport */
 }
+
+/* App Layout */
+.App {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Allow content to stretch */
+}
+
+
+/* Main Content */
+main {
+  flex: 1; /* Ensures main content stretches to push footer down */
+ }
+
+
+.header{
+   background-color: #55efc4;
+   font-size: 20px;
+   font-weight: 600;
+}
+
+.App-footer{
+  padding: 8px;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 15px;
+  background-color: #55efc4;
+}
+h1{
+  text-align: center;
+  color: #6F1E51;
+}
+h2{
+  text-align: center;
+  background-color: #55efc4;
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

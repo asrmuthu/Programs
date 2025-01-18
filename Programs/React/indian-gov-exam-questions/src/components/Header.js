@@ -1,21 +1,15 @@
-// src/components/Header.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { List } from "antd";
-
+import { Space } from 'antd';
 
 function Header() {
   return (
-    <header className="App-header">
-    <List>
-        <List.Item>
-          <Link to="/">Home</Link>
-        </List.Item>
-        <List.Item>
-          <Link to="/about">About</Link>
-        </List.Item>
-    </List>
-    </header>
+    <div className='header'>
+      <Space>
+        <Link to="/">HOME</Link>
+        <Link to="/about">ABOUT</Link>
+      </Space>
+    </div>
   );
 }
 
