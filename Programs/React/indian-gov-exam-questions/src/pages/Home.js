@@ -28,28 +28,18 @@ function Home() {
     },
     {
       key: '5',
-      name: 'NEET PG',
-      address: <Link to="/neet-pg">Link</Link>,
+      name: 'INDIAN ARMY',
+      address: <Link to="/army">Link</Link>,
     },
     {
       key: '6',
-      name: 'UPSC All',
-      address: <Link to="/neet-pg">Link</Link>,
+      name: 'DRDO',
+      address: <Link to="/drdo">Link</Link>,
     },
     {
       key: '7',
-      name: 'INDIAN ARMY',
-      address: <Link to="/neet-pg">Link</Link>,
-    },
-    {
-      key: '8',
-      name: 'DRDO',
-      address: <Link to="/neet-pg">Link</Link>,
-    },
-    {
-      key: '9',
       name: 'SBI (State Bank of India )',
-      address: <Link to="/neet-pg">Link</Link>,
+      address: <Link to="/sbi">Link</Link>,
     },
   ];
   
