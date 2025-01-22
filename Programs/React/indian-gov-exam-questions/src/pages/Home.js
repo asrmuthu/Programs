@@ -60,7 +60,9 @@ function Home() {
   return (
     <div className='home'>
         <h1>Indian Government Question and Answers</h1>
+        <div className='table'>
         <Table dataSource={dataSource} columns={columns} />
+        </div>
     </div>
   );
 }

@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+/* General Reset */
 * {
   margin: 6px 15px;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
 }
 
-/* General Reset */
+/* General Reset for body and html */
 body, html {
   margin: 0;
   padding: 0;
@@ -41,7 +42,7 @@ main {
   text-align: center;
 }
 
-/* Footer */
+/* Footer Styling */
 .App-footer {
   padding: 8px;
   text-align: center;
@@ -50,7 +51,7 @@ main {
   background-color: #55efc4;
 }
 
-/* Typography */
+/* Typography Styling */
 h1 {
   text-align: center;
   color: #6F1E51;
@@ -65,33 +66,33 @@ h2 {
 }
 
 /* Table Styling */
-:where(.css-dev-only-do-not-override-nqoqt9).ant-table-wrapper table {
+.ant-table-wrapper table {
   font-size: 20px;
 }
 
-:where(.css-dev-only-do-not-override-nqoqt9).ant-table-wrapper .ant-table-container table > thead > tr > th {
+.ant-table-wrapper .ant-table-container table > thead > tr > th {
   background-color: #55efc4;
   color: #6F1E51;
   font-weight: bold;
 }
 
-:where(.css-dev-only-do-not-override-nqoqt9).ant-table-wrapper .ant-table-tbody > tr > td {
+.ant-table-wrapper .ant-table-tbody > tr > td {
   border-style: solid;
 }
 
-:where(.css-dev-only-do-not-override-nqoqt9).ant-table-wrapper .ant-table-tbody > tr:last-child > td {
+.ant-table-wrapper .ant-table-tbody > tr:last-child > td {
   border-bottom: 1px solid black;
 }
 
-/* Pagination */
-:where(.css-dev-only-do-not-override-nqoqt9).ant-pagination .ant-pagination-item-active a {
+/* Pagination Styling */
+.ant-pagination .ant-pagination-item-active a {
   color: black;
   background-color: white;
   border-style: dashed;
 }
 
-/* Buttons */
-:where(.css-dev-only-do-not-override-nqoqt9) a {
+/* Buttons Styling */
+.ant-btn {
   background-color: #007bff;
   border: none;
   border-radius: 15px;
@@ -101,13 +102,12 @@ h2 {
   padding: 10px 20px;
 }
 
-
 /* Mobile Layout Adjustments */
 @media (max-width: 480px) {
   * {
     margin: 0;
   }
-  
+
   .header {
     font-size: 16px;
     padding: 8px;
@@ -129,12 +129,11 @@ h2 {
     border-radius: 10px;
   }
 
-  :where(.css-dev-only-do-not-override-nqoqt9).ant-table-wrapper table {
+  .ant-table-wrapper table {
     font-size: 14px;
   }
 
-  :where(.css-dev-only-do-not-override-nqoqt9) a {
+  .ant-btn {
     padding: 6px;
   }
-  
 }
