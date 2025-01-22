@@ -25,7 +25,7 @@ function SSC() {
       year: "2021",
       batch: "1",
       address: (
-        <a href={constable1} target="_blank">
+        <a href={constable1} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -36,7 +36,7 @@ function SSC() {
       year: "2021",
       batch: "2",
       address: (
-        <a href={constable2} target="_blank">
+        <a href={constable2} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -47,7 +47,7 @@ function SSC() {
       year: "2021",
       batch: "3",
       address: (
-        <a href={constable3} target="_blank">
+        <a href={constable3} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -58,7 +58,7 @@ function SSC() {
       year: "2021",
       batch: "4",
       address: (
-        <a href={constable4} target="_blank">
+        <a href={constable4} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -72,7 +72,7 @@ function SSC() {
       year: "2018",
       batch: "1",
       address: (
-        <a href={si_2018_1} target="_blank">
+        <a href={si_2018_1} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -83,7 +83,7 @@ function SSC() {
       year: "2018",
       batch: "2",
       address: (
-        <a href={si_2018_2} target="_blank">
+        <a href={si_2018_2} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -94,7 +94,7 @@ function SSC() {
       year: "2018",
       batch: "3",
       address: (
-        <a href={si_2018_3} target="_blank">
+        <a href={si_2018_3} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -105,7 +105,7 @@ function SSC() {
       year: "2018",
       batch: "4",
       address: (
-        <a href={si_2018_4} target="_blank">
+        <a href={si_2018_4} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -116,7 +116,7 @@ function SSC() {
       year: "2020",
       batch: "1",
       address: (
-        <a href={si_2020_1} target="_blank">
+        <a href={si_2020_1} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -127,7 +127,7 @@ function SSC() {
       year: "2020",
       batch: "2",
       address: (
-        <a href={si_2020_2} target="_blank">
+        <a href={si_2020_2} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -138,7 +138,7 @@ function SSC() {
       year: "2020",
       batch: "3",
       address: (
-        <a href={si_2020_3} target="_blank">
+        <a href={si_2020_3} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -149,7 +149,7 @@ function SSC() {
       year: "2020",
       batch: "4",
       address: (
-        <a href={si_2020_4} target="_blank">
+        <a href={si_2020_4} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -160,7 +160,7 @@ function SSC() {
       year: "2020",
       batch: "5",
       address: (
-        <a href={si_2020_5} target="_blank">
+        <a href={si_2020_5} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -171,7 +171,7 @@ function SSC() {
       year: "2020",
       batch: "6",
       address: (
-        <a href={si_2020_6} target="_blank">
+        <a href={si_2020_6} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),

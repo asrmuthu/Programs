@@ -16,7 +16,7 @@ function NEETPG() {
       year: "2023",
       batch: "1",
       address: (
-        <a href={pdf1_1} target="_blank">
+        <a href={pdf1_1} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -27,7 +27,7 @@ function NEETPG() {
       year: "2022",
       batch: "1",
       address: (
-        <a href={pdf1_2} target="_blank">
+        <a href={pdf1_2} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -38,7 +38,7 @@ function NEETPG() {
       year: "2021",
       batch: "1",
       address: (
-        <a href={pdf1_3} target="_blank">
+        <a href={pdf1_3} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -49,7 +49,7 @@ function NEETPG() {
       year: "2020",
       batch: "1",
       address: (
-        <a href={pdf1_4} target="_blank">
+        <a href={pdf1_4} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -60,7 +60,7 @@ function NEETPG() {
       year: "2019",
       batch: "1",
       address: (
-        <a href={pdf1_5} target="_blank">
+        <a href={pdf1_5} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),

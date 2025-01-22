@@ -24,7 +24,7 @@ function RRB() {
       year: "2018",
       batch: "1",
       address: (
-        <a href={pdf1_1} target="_blank">
+        <a href={pdf1_1} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -35,7 +35,7 @@ function RRB() {
       year: "2018",
       batch: "2",
       address: (
-        <a href={pdf1_2} target="_blank">
+        <a href={pdf1_2} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -46,7 +46,7 @@ function RRB() {
       year: "2018",
       batch: "3",
       address: (
-        <a href={pdf1_3} target="_blank">
+        <a href={pdf1_3} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -57,7 +57,7 @@ function RRB() {
       year: "2018",
       batch: "4",
       address: (
-        <a href={pdf1_4} target="_blank">
+        <a href={pdf1_4} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -68,7 +68,7 @@ function RRB() {
       year: "2018",
       batch: "5",
       address: (
-        <a href={pdf1_5} target="_blank">
+        <a href={pdf1_5} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -82,7 +82,7 @@ function RRB() {
       year: "2021",
       batch: "1",
       address: (
-        <a href={pdf2_1} target="_blank">
+        <a href={pdf2_1} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -93,7 +93,7 @@ function RRB() {
       year: "2021",
       batch: "2",
       address: (
-        <a href={pdf2_2} target="_blank">
+        <a href={pdf2_2} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -104,7 +104,7 @@ function RRB() {
       year: "2021",
       batch: "3",
       address: (
-        <a href={pdf2_3} target="_blank">
+        <a href={pdf2_3} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -115,7 +115,7 @@ function RRB() {
       year: "2021",
       batch: "4",
       address: (
-        <a href={pdf2_4} target="_blank">
+        <a href={pdf2_4} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -126,7 +126,7 @@ function RRB() {
       year: "2021",
       batch: "5",
       address: (
-        <a href={pdf2_5} target="_blank">
+        <a href={pdf2_5} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -137,7 +137,7 @@ function RRB() {
       year: "2017",
       batch: "1",
       address: (
-        <a href={pdf2_6} target="_blank">
+        <a href={pdf2_6} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -148,7 +148,7 @@ function RRB() {
       year: "2017",
       batch: "2",
       address: (
-        <a href={pdf2_7} target="_blank">
+        <a href={pdf2_7} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -159,7 +159,7 @@ function RRB() {
       year: "2017",
       batch: "3",
       address: (
-        <a href={pdf2_8} target="_blank">
+        <a href={pdf2_8} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),

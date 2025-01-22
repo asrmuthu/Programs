@@ -43,7 +43,7 @@ function UPSCCMS() {
       year: "2014",
       batch: "1",
       address: (
-        <a href={pdf1_1} target="_blank">
+        <a href={pdf1_1} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -54,7 +54,7 @@ function UPSCCMS() {
       year: "2014",
       batch: "1",
       address: (
-        <a href={pdf1_2} target="_blank">
+        <a href={pdf1_2} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -65,7 +65,7 @@ function UPSCCMS() {
       year: "2014",
       batch: "2",
       address: (
-        <a href={pdf1_3} target="_blank">
+        <a href={pdf1_3} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -76,7 +76,7 @@ function UPSCCMS() {
       year: "2014",
       batch: "2",
       address: (
-        <a href={pdf1_4} target="_blank">
+        <a href={pdf1_4} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -87,7 +87,7 @@ function UPSCCMS() {
       year: "2016",
       batch: "1",
       address: (
-        <a href={pdf1_5} target="_blank">
+        <a href={pdf1_5} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -98,7 +98,7 @@ function UPSCCMS() {
       year: "2016",
       batch: "2",
       address: (
-        <a href={pdf1_6} target="_blank">
+        <a href={pdf1_6} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -109,7 +109,7 @@ function UPSCCMS() {
       year: "2017",
       batch: "1",
       address: (
-        <a href={pdf1_7} target="_blank">
+        <a href={pdf1_7} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -120,7 +120,7 @@ function UPSCCMS() {
       year: "2017",
       batch: "1",
       address: (
-        <a href={pdf1_8} target="_blank">
+        <a href={pdf1_8} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -131,7 +131,7 @@ function UPSCCMS() {
       year: "2017",
       batch: "2",
       address: (
-        <a href={pdf1_9} target="_blank">
+        <a href={pdf1_9} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -142,7 +142,7 @@ function UPSCCMS() {
       year: "2017",
       batch: "2",
       address: (
-        <a href={pdf1_10} target="_blank">
+        <a href={pdf1_10} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),

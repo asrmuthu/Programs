@@ -15,7 +15,7 @@ function IBPS() {
       year: "2022",
       batch: "1",
       address: (
-        <a href={pdf1_1} target="_blank">
+        <a href={pdf1_1} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -26,7 +26,7 @@ function IBPS() {
       year: "2022",
       batch: "2",
       address: (
-        <a href={pdf1_2} target="_blank">
+        <a href={pdf1_2} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -37,7 +37,7 @@ function IBPS() {
       year: "2022",
       batch: "3",
       address: (
-        <a href={pdf1_3} target="_blank">
+        <a href={pdf1_3} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -48,7 +48,7 @@ function IBPS() {
       year: "2022",
       batch: "4",
       address: (
-        <a href={pdf1_4} target="_blank">
+        <a href={pdf1_4} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),

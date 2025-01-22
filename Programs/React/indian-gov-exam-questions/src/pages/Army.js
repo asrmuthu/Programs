@@ -23,7 +23,7 @@ function Army() {
       year: "2018",
       batch: "1",
       address: (
-        <a href={pdf1_1} target="_blank">
+        <a href={pdf1_1} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -34,7 +34,7 @@ function Army() {
       year: "2019",
       batch: "1",
       address: (
-        <a href={pdf1_2} target="_blank">
+        <a href={pdf1_2} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -49,7 +49,7 @@ function Army() {
       year: "2018",
       batch: "1",
       address: (
-        <a href={pdf2_1} target="_blank">
+        <a href={pdf2_1} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -60,7 +60,7 @@ function Army() {
       year: "2019",
       batch: "1",
       address: (
-        <a href={pdf2_2} target="_blank">
+        <a href={pdf2_2} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -71,7 +71,7 @@ function Army() {
       year: "2020",
       batch: "1",
       address: (
-        <a href={pdf2_3} target="_blank">
+        <a href={pdf2_3} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -82,7 +82,7 @@ function Army() {
       year: "2021",
       batch: "1",
       address: (
-        <a href={pdf2_4} target="_blank">
+        <a href={pdf2_4} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -93,7 +93,7 @@ function Army() {
       year: "2023",
       batch: "1",
       address: (
-        <a href={pdf2_5} target="_blank">
+        <a href={pdf2_5} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -107,7 +107,7 @@ function Army() {
       year: "2019",
       batch: "1",
       address: (
-        <a href={pdf3_1} target="_blank">
+        <a href={pdf3_1} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -118,7 +118,7 @@ function Army() {
       year: "2023",
       batch: "1",
       address: (
-        <a href={pdf3_2} target="_blank">
+        <a href={pdf3_2} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -132,7 +132,7 @@ function Army() {
       year: "2018",
       batch: "1",
       address: (
-        <a href={pdf4_1} target="_blank">
+        <a href={pdf4_1} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
@@ -143,7 +143,7 @@ function Army() {
       year: "2019",
       batch: "1",
       address: (
-        <a href={pdf4_2} target="_blank">
+        <a href={pdf4_2} target="_blank" rel="noopener noreferrer">
           Download
         </a>
       ),
