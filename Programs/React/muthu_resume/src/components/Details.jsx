@@ -5,21 +5,18 @@ return (
     <div className="details">
         <h2>Professional Summary:</h2>
         <p>
-            Experienced software professional with over 7 years of expertise in both front-end and back-end technologies. Proficient in building robust applications, working in both service and product-based environments. Committed to continuous learning and staying updated with industry trends. Seeking a challenging role to further enhance my skills and contribute to organizational success.
+            Experienced software engineer with over 7 years of expertise in front-end technologies, specializing in React.js. Adept at building scalable and robust applications in both service and product-based environments. Highly committed to continuous professional growth and staying updated with industry trends and technologies. Seeking a challenging role to further enhance skills and contribute to organizational growth.
         </p>
         <h2>Technical Skills:</h2>
         <p>
-            <strong>Primary:</strong> React Js, C# .Net, SQL Server<br />
-            <strong>Secondary:</strong> JavaScript, HTML, CSS, XML, XSLT, XSL-FO, DITA.
-        </p>
-        <h2>TOOLS:</h2>
-        <p>
-            Azure DevOps, JIRA, GIT, Visual Studio, Oxygen, Antenna House Formatter, Docker, Postman, Apache, Ubuntu, VS Code.
+            <strong>Primary:</strong> React js<br /><br />
+            <strong>Secondary:</strong> JavaScript, Redux, Hooks, ES6, HTML, CSS, DOM, Git, REST APIs.<br /><br />
+            <strong>Tools & Technologies:</strong> Azure DevOps, JIRA, Agile Scrum, Postman.
         </p>
         <h2>EXPERIENCE:</h2>
         <section className="experience">
         <p>
-            <strong>Deloitte(Persistent System)- Bangalore</strong><br />
+            <strong>Persistent System(Deloitte)- Bangalore</strong><br />
             Engineering Lead<br />
             June 2024 - Present
         </p>
@@ -49,6 +46,17 @@ return (
         <ul>
             <li>Agile Methodology</li>
             <li>Scrum Master</li>
+        </ul>
+        <h2>My Website:</h2>
+        <ul>
+            <li><a href='https://resume-muthupandi-raj.web.app/' target='_blank'>My Resume</a></li>
+            <li><a href='https://qrcode-genrate.web.app/' target='_blank'>QR Code generated</a></li>
+            <li><a href='https://weather-allcity.web.app/' target='_blank'>Weather</a></li>
+            <li><a href='https://indian-gov-exam-questions.web.app/' target='_blank'>Indian Government Question and Answers</a></li>
+            <li><a href='https://maxtaxitheni.in/' target='_blank'>MaxTaxi Theni</a></li>
+            <li><a href='https://bmi-calcul.web.app/' target='_blank'>BMI</a></li>
+            <li><a href='https://user-card-muthu.web.app/' target='_blank'>User Card</a></li>
+            <li><a href='https://currency-convert-all.web.app/' target='_blank'>Currency Converter</a></li>
         </ul>
         <h2>SOFT SKILLS:</h2>
         <ul>
