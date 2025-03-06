@@ -7,7 +7,6 @@ const Increment = () => {
   const [val, setVal] = useState("");
   const [isAdded, setIsAdded] = useState(false);
 
-
   const Increment = () => {
     setIsAdded(true);
     setVal(Number(val) + 1);
