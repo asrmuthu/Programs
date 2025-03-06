@@ -3,10 +3,10 @@ import { Card, Button } from "antd";
 import { Link } from "react-router-dom";
 import { spaces } from "../data/spaces";
 
-const Home = () => {
+const Features = () => {
   return (
     <div style={{ maxWidth: 900, margin: "auto", padding: "20px" }}>
-      <h1>Our Space Overview</h1>
+      <h1>Why Choose us?</h1>
       <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
         {spaces.map((space) => (
           <Card
@@ -26,4 +26,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Features;
