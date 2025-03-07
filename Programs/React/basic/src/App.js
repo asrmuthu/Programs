@@ -20,10 +20,10 @@ import { Axios } from 'axios';
 function App() {
   return (
     <div className="App">
-      <Alert />
+      {/* <Alert /> */}
       {/* <GetAPI_axios /> */}
-      {/* <GetAPI_Axios_complex /> */}
-      <PostAPi_axios />
+      <GetAPI_Axios_complex />
+      {/* <PostAPi_axios /> */}
       {/* <Calculator />
       <RandomNameChange />
       <Date />
