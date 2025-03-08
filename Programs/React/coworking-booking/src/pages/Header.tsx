@@ -15,41 +15,50 @@ const Header: React.FC = () => {
           <img src={Bhive_logo} alt="BHIVE Logo" style={{ height: "40px" }} />
         </Col>
         <Col>
-        <Button type="link" href="tel:7904688429">
+          <Button type="link" href="tel:7904688429">
             <PhoneFilled className="phone-button" />
           </Button>
         </Col>
       </Row>
 
       <Row gutter={[16, 16]} align="middle" style={{ marginTop: 20 }}>
-        <Col xs={{ order: 1, span: 24 }} md={{ order: 2, span: 12 }} style={{ textAlign: "center", position: "relative" }}>
-          <img 
-            src={Vector7} 
-            alt="Vector7" 
-            style={{ width: "100%", maxHeight: "400px" }} 
+        <Col
+          xs={{ order: 1, span: 24 }}
+          md={{ order: 2, span: 12 }}
+          style={{
+            textAlign: "center",
+            position: "relative",
+            display: "flex",
+            justifyContent: "flex-end",
+          }}
+        >
+          <img
+            src={Vector7}
+            alt="Vector7"
+            style={{ maxHeight: "350px", width: "100%", maxWidth: "500px" }}
           />
           <img
             src={Coworking}
             alt="Coworking"
             style={{
               position: "absolute",
-              top: "50%",
-              left: "50%",
+              top: "60%",
+              left: "45%",
               transform: "translate(-50%, -50%)",
-              width: "70%", 
-              maxWidth: "300px"
+              width: "70%",
+              maxWidth: "250px",
             }}
           />
         </Col>
 
         <Col xs={{ order: 2, span: 24 }} md={{ order: 1, span: 12 }}>
-          <Text 
+          <Text
             className="banner-text"
-            style={{ 
-              fontSize: "4vw", 
-              fontWeight: "700", 
-              lineHeight: "1.2", 
-              display: "block" 
+            style={{
+              fontSize: "4vw",
+              fontWeight: "700",
+              lineHeight: "1.2",
+              display: "block",
             }}
           >
             Host your meeting with world-class amenities.
