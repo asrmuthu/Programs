@@ -1,8 +1,18 @@
 import React from 'react'
+import { useState } from 'react'
 
 const Hide_Show = () => {
+    const [show, setShow] = useState(true)
+    const hideContent = () => {
+        setShow(!show)
+    }
   return (
-    <div>Hide_Show</div>
+    <div>
+        <button onClick={hideContent}>
+            {show ? 'Hide' : 'Show'}
+        </button>
+    {show && <p>Content</p>}
+    </div>
   )
 }
 
