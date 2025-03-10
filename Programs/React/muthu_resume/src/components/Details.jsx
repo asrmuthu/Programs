@@ -57,6 +57,7 @@ return (
             <li><a href='https://bmi-calcul.web.app/' target='_blank'>BMI</a></li>
             <li><a href='https://user-card-muthu.web.app/' target='_blank'>User Card</a></li>
             <li><a href='https://currency-convert-all.web.app/' target='_blank'>Currency Converter</a></li>
+            <li><a href='https://bhiveworkspace-muthupandi.web.app/' target='_blank'>Bhive Workspace App</a></li>
         </ul>
         <h2>SOFT SKILLS:</h2>
         <ul>
