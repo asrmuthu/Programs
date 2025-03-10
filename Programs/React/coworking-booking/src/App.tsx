@@ -5,7 +5,7 @@ import { store } from "./store";
 import Home from "./pages/Home";
 import "./App.css";
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <Provider store={store}>
       <Router>

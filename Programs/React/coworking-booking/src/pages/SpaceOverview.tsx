@@ -6,7 +6,7 @@ import { Row, Col, Typography, Grid } from "antd";
 
 const { Text } = Typography;
 
-const SpaceOverview: React.FC = () => {
+const SpaceOverview = () => {
   const centers = useSelector((state: RootState) => state.centers.centers);
 
   const screens = Grid.useBreakpoint();
