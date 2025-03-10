@@ -4,7 +4,7 @@ import Hide_Show from './Components/Hide_Show';
 import DataBinding from './Components/DataBinding';
 import ButtonDisabled from './Components/ButtonDisabled';
 import Parent from './Components/Parent';
-import Child from './Components/Child';
+import AddNumber from './Components/AddNumber';
 
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
      {/* <Hide_Show /> */}
      {/* <DataBinding /> */}
      {/* <ButtonDisabled /> */}
-     <Parent />
-     {/* <Child /> */}
+     {/* <Parent /> */}
+     <AddNumber />
     </div>
   );
 }
