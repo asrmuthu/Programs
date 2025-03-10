@@ -1,23 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import Button_main from './Design/button/Button_main.jsx';
+import Typography_main from './Design/Typography/Typography_main.jsx';
+import Flex_main from './Design/Flex/Flex_main.jsx';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{padding: '20px'}}>
+     {/* <Button_main /> */}
+     {/* <Typography_main /> */}
+     <Flex_main />
     </div>
   );
 }
