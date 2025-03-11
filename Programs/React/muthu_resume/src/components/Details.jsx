@@ -5,13 +5,13 @@ return (
     <div className="details">
         <h2>Professional Summary:</h2>
         <p>
-            Experienced software engineer with over 7 years of expertise in front-end technologies, specializing in React.js. Adept at building scalable and robust applications in both service and product-based environments. Highly committed to continuous professional growth and staying updated with industry trends and technologies. Seeking a challenging role to further enhance skills and contribute to organizational growth.
+        Experienced software engineer with over 7 years of expertise in front-end technologies. Adept at building scalable and robust applications in both service and product-based environments. Highly committed to continuous professional growth and staying updated with industry trends and technologies. Seeking a challenging role to further enhance skills and contribute to organizational growth.
         </p>
         <h2>Technical Skills:</h2>
         <p>
             <strong>Primary:</strong> React js<br /><br />
-            <strong>Secondary:</strong> JavaScript, Redux, Hooks, ES6, HTML, CSS, DOM, Git, REST APIs.<br /><br />
-            <strong>Tools & Technologies:</strong> Azure DevOps, JIRA, Agile Scrum, Postman.
+            <strong>Secondary:</strong> HTML5, CSS3, Antd, JavaScript,TypeScript, Webpack, Hooks, Context API, Redux, DOM, REST API, SQL.<br /><br />
+            <strong>Tools & Technologies:</strong> Git, Github, Visual Studio Code, Azure DevOps, JIRA, Postman, CI/CD, Agile Scrum.
         </p>
         <h2>EXPERIENCE:</h2>
         <section className="experience">
@@ -45,7 +45,13 @@ return (
         <h2>Project Management:</h2>
         <ul>
             <li>Agile Methodology</li>
+            <li>Architecture & System Design</li>
+            <li>Project Planning & Execution</li>
             <li>Scrum Master</li>
+        </ul>
+        <h2>Certifications:</h2>
+        <ul>
+            <li>NLP -  Machine Learning</li>
         </ul>
         <h2>My Website:</h2>
         <ul>

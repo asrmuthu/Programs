@@ -16,25 +16,12 @@ import SimpleUseState2 from './components/SimpleUseState2';
 import MediumUseState from './components/MediumUseState';
 import Use_effact from './components/Use_effact';
 import { Axios } from 'axios';
+import ColorChange from './components/ColorChange';
 
 function App() {
   return (
     <div className="App">
-      {/* <Alert /> */}
-      {/* <GetAPI_axios /> */}
-      <GetAPI_Axios_complex />
-      {/* <PostAPi_axios /> */}
-      {/* <Calculator />
-      <RandomNameChange />
-      <Date />
-      <FunctionCalling />
-      <EventFunction />
-      <ArrayMap />
-      <ArrayMapUsestate />
-      <SimpleUseState />
-      <SimpleUseState2 />
-      <MediumUseState />
-      <Use_effact /> */}
+      <ColorChange />
     </div>
   );
 }
