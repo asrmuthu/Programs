@@ -1,42 +1,43 @@
+import React, { useEffect, useState } from "react";
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
 
 const Fetchdata = () => {
-  const[user, setUser] = useState([])
-  const[loading, setLoading] = useState(false)
+  const [user, setUser] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const fetchAPi = async () => {
-      setLoading(true)
-      try{
-        const API = await axios.get('https://jsonplaceholder.typicode.com/users')
-        console.log(API);
-        setUser(API.data)
+    const fetchAPI = async () => {
+      setLoading(true);
+      try {
+        // const response = await axios.get("https://jsonplaceholder.typicode.com/users");
+        // setUser(response.data)
+        // console.log(response.data)
+        const response = await fetch("https://jsonplaceholder.typicode.com/users");
+        setUser(await response.json())   
+      } catch (err) {
+        console.log("Error:", err);
+      } finally {
+        setLoading(false);
       }
-      catch(err){
-        console.log('error', err);
-      }
-      finally{
-        setLoading(false)
-      }
-    }
-    fetchAPi()
+    };
 
-  }, [])
-
-
+    fetchAPI();
+  }, []);
 
   return (
     <div>
-     <p>DATAS</p>
-     {loading ? 'loading...' : <ol>
-     {user.map((item, id) =>(
-      <li key={id}>{item.name}</li>
-     ))}
-     </ol>}
-     
+      <p>DATAS</p>
+      {loading ? (
+        "Loading..."
+      ) : (
+        <ol>
+          {user.map((item) => (
+            <li key={item.id}>{item.name}</li> // ✅ Use `item.id` as key
+          ))}
+        </ol>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default Fetchdata
+export default Fetchdata;
