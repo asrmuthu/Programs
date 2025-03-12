@@ -6,29 +6,35 @@ const Fetchdata = () => {
   const[loading, setLoading] = useState(false)
 
   useEffect(() => {
-    const fetchapi = async () => {
-     setLoading(true);
-    try{
-     const response = await axios.get('https://jsonplaceholder.typicode.com/users');
-     setUser(response.data)
-     console.log(response.data)
+    const fetchAPi = async () => {
+      setLoading(true)
+      try{
+        const API = await axios.get('https://jsonplaceholder.typicode.com/users')
+        console.log(API);
+        setUser(API.data)
+      }
+      catch(err){
+        console.log('error', err);
+      }
+      finally{
+        setLoading(false)
+      }
     }
-    catch(error){
-        console.log("error", error)
-    }
-    finally{
-        setLoading(false); 
-    } 
-}
-fetchapi();
+    fetchAPi()
 
-},[])  
+  }, [])
 
 
 
   return (
     <div>
-     aaaa
+     <p>DATAS</p>
+     {loading ? 'loading...' : <ol>
+     {user.map((item, id) =>(
+      <li key={id}>{item.name}</li>
+     ))}
+     </ol>}
+     
     </div>
   )
 }
