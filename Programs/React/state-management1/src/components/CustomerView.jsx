@@ -1,12 +1,20 @@
 import React from 'react';
+import {useSelector} from 'react-redux'
+import {deleteCustomer} from '../customerSlice'
+import {useDispatch} from 'react-redux'
 
-const CustomerView = ({ items = [], handleDelete }) => {
+
+const CustomerView = () => {
+  const items = useSelector((state) => state.customer1)
+    const dispatch = useDispatch()
+  
+    const handleDelete = (index) => {
+      dispatch(deleteCustomer(index))
+    }
+
   return (
     <div>
       <h3>Customer List</h3>
-      {items.length === 0 ? (
-        <p>No customers added yet.</p>
-      ) : (
         <ol>
           {items.map((item, index) => (
             <li key={index}>
@@ -15,7 +23,6 @@ const CustomerView = ({ items = [], handleDelete }) => {
             </li>
           ))}
         </ol>
-      )}
     </div>
   );
 };
