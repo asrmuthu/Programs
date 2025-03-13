@@ -1,10 +1,10 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement } from "./store";
+import { increment, decrement } from "./createSlice_com";
 
 const Counter = () => {
-  const count = useSelector((state) => state.counter1.count); // Get state
-  const dispatch = useDispatch(); // Dispatch actions
+  const count = useSelector((state) => state.customer11.count); // ✅ Fixed state key
+  const dispatch = useDispatch(); // ✅ Dispatch actions
 
   return (
     <div>

@@ -1,26 +1,11 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
+import createSlice_com from "./createSlice_com";
 
-// 🔹 Create a slice (Reducer + Actions)
-const counterSlice1 = createSlice({
-  name: "counter1",
-  initialState: { count: 0 },
-  reducers: {
-    increment: (state) => {
-      state.count += 1;
-    },
-    decrement: (state) => {
-      state.count -= 1;
-    },
+const store = configureStore({
+  devTools: true,
+  reducer: {
+    customer11: createSlice_com,  // ✅ Name should match useSelector
   },
 });
-
-
-// 🔹 Create and export the store
-export const store = configureStore({
-  reducer: { counter1: counterSlice1.reducer },
-});
-
-// 🔹 Export actions
-export const { increment, decrement } = counterSlice1.actions;
 
 export default store;
