@@ -1,12 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import CustomerAdd from './components/CustomerAdd';
-import CustomerView from './components/CustomerView';
 
 function App() {
   return (
     <div className="App">
-     <CustomerAdd />
+      <CustomerAdd />
     </div>
   );
 }
