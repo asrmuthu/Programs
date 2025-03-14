@@ -1,31 +1,31 @@
-import React, { useMemo, useState } from 'react'
+import React, { useMemo, useState } from "react";
 
 const UseMemo = () => {
-const[number, setNumber] = useState('')
+  const [number, setNumber] = useState(0);
 
+  const handleChange = (e) => {
+    setNumber(e.target.value);
+  };
 
-const handleChange = (e) => {
-    setNumber(e.target.value)
-}
+  const handleFactorial = (n) => {
+    let result = 1;
 
-const handleFactorial = (n) => {
-for(i=0; i<=n; i++){
- result *= i;
-}
+    for (let i = 2; i <= n; i++) {
+        result *= i;
+      }
+      return result;
+    };
 
-return result
-}
-
-useMemo(() => {
-    handleFactorial(number)
-},[])
-
+    const memocal = useMemo(() => handleFactorial(number), [number]);
   return (
-    <div>Factorial
-        <input type='number' value={number} onChange={handleChange} />
-        <p>factorial of  {number} value is {}</p>
+    <div>
+      Factorial
+      <input type="number" value={number} onChange={handleChange} />
+      <p>
+        factorial of {number} value is {memocal}
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default UseMemo
+export default UseMemo;
