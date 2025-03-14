@@ -1,31 +1,17 @@
-// src/App.js
-import React from "react";
-import Empoyees from "./components/Emmployee"
-import UserProvider from "./context/UserContext";
-import ParentComponent from "./components/ParentComponent";
+import React, { createContext, useState } from "react";
+import Parent from "./Parent";
+import Child from "./Child";
+
+export const MyContext = createContext(); // Creating Context
 
 const App = () => {
-const users = [{
-  id: 1,
-  name: "muthu",
-  role: "dev"
-},
-{
-  id: 2,
-  name: "pandi",
-  role: "test"
-},
-{
-  id: 3,
-  name: "raj",
-  role: "lead"
-}];
+  const [name, setName] = useState("Muthupandi"); // Creating State
 
   return (
-    <div>
-      <Header title={title}/>
-      <Empoyees users={users}/>
-    </div>
+    <MyContext.Provider value={{ name, setName }}>
+      <Parent />
+      <Child />
+    </MyContext.Provider>
   );
 };
 
