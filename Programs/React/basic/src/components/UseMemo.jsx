@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 const UseMemo = () => {
   const [number, setNumber] = useState(0);
@@ -17,6 +17,8 @@ const UseMemo = () => {
     };
 
     const memocal = useMemo(() => handleFactorial(number), [number]);
+
+    
   return (
     <div>
       Factorial
