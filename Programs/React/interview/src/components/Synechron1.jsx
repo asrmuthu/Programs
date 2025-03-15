@@ -10,6 +10,8 @@ const Synechron1 = () => {
         { id: 3, name: "C", job: "unknown" },
       ]);
 
+
+
 const handleAdd = () => {
     const mergedUsers  = [...users, ...add]
    const exitUser = mergedUsers.some((aa, index) => aa.name === val1)
