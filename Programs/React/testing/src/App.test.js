@@ -1,8 +1,19 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen, fireEvent } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("initial count is 0", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByTestId("count")).toHaveTextContent("0");
+});
+
+test("increments count", () => {
+  render(<App />);
+  fireEvent.click(screen.getByText("Increment"));
+  expect(screen.getByTestId("count")).toHaveTextContent("1");
+});
+
+test("decrements count", () => {
+  render(<App />);
+  fireEvent.click(screen.getByText("Decrement"));
+  expect(screen.getByTestId("count")).toHaveTextContent("-1");
 });
