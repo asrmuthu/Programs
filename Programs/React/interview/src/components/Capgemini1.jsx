@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import React from "react";
 import axios from "axios";
 
-const Congnisent = () => {
+const Capgemini1 = () => {
   const [user, setUser] = useState([]);
 
   useEffect(() => {
@@ -47,4 +47,4 @@ const Congnisent = () => {
   }
 };
 
-export default Congnisent;
+export default Capgemini1;
