@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi File Upload & Download</title>
+</head>
+<body>
+    <h2>Multi File Upload & Download (Client-Side Only)</h2>
+
+    <!-- File Upload -->
+    <input type="file" id="fileInput" multiple>
+    <button onclick="uploadFiles()">Upload</button>
+    <p id="uploadStatus"></p>
+
+    <h3>Uploaded Files:</h3>
+    <ul id="fileList"></ul>
+
+    <script>
+        function uploadFiles() {
+            const fileInput = document.getElementById("fileInput");
+            const fileList = document.getElementById("fileList");
+            const uploadStatus = document.getElementById("uploadStatus");
+
+            if (!fileInput.files.length) {
+                alert("Please select at least one file.");
+                return;
+            }
+
+            const files = fileInput.files;
+            const storedFiles = JSON.parse(localStorage.getItem("uploadedFiles")) || [];
+
+            for (const file of files) {
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    storedFiles.push({
+                        name: file.name,
+                        content: event.target.result
+                    });
+
+                    // Store updated list in localStorage
+                    localStorage.setItem("uploadedFiles", JSON.stringify(storedFiles));
+                    displayFiles();
+                };
+                reader.readAsDataURL(file);
+            }
+
+            uploadStatus.innerText = `${files.length} files uploaded successfully.`;
+        }
+
+        function displayFiles() {
+            const fileList = document.getElementById("fileList");
+            fileList.innerHTML = "";  // Clear previous entries
+
+            const storedFiles = JSON.parse(localStorage.getItem("uploadedFiles")) || [];
+
+            storedFiles.forEach((file, index) => {
+                const li = document.createElement("li");
+                li.innerHTML = `${file.name} <button onclick="downloadFile(${index})">Download</button>`;
+                fileList.appendChild(li);
+            });
+        }
+
+        function downloadFile(index) {
+            const storedFiles = JSON.parse(localStorage.getItem("uploadedFiles")) || [];
+
+            if (!storedFiles[index]) {
+                alert("File not found!");
+                return;
+            }
+
+            const fileData = storedFiles[index];
+            const blob = new Blob([atob(fileData.content.split(',')[1])], { type: "application/octet-stream" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = fileData.name;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Load files on page load
+        displayFiles();
+    </script>
+</body>
+</html>
