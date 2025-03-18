@@ -8,9 +8,9 @@ import Getting_api_Virtualization from './Getting_api_Virtualization'
 const App = () => {
   return (
     <div>
-      {/* <Getting_api_Scroll /> */}
+      <Getting_api_Scroll />
       {/* <Getting_api_Pagination /> */}
-      <Getting_api_Virtualization />
+      {/* <Getting_api_Virtualization /> */}
     </div>
   )
 }
