@@ -20,11 +20,13 @@ import ColorChange from './components/ColorChange';
 import Fetchdata from './components/Fetchdata';
 import UseMemo from './components/UseMemo';
 import Login from './components/Login';
+import FileUploadDownload from './components/FileUploadDownload';
 
 function App() {
   return (
     <div className="App">
-      <Login />
+      {/* <Login /> */}
+      <FileUploadDownload />
     </div>
   );
 }
