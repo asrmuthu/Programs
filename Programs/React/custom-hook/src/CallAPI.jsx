@@ -2,10 +2,10 @@ import React from "react";
 import useCustomAPI from "./useCustomAPI";
 
 const CallAPI = () => {
-  const { data, loading, error } = useCustomAPI("https://jsonplaceholder.typicode.com/posts");
+  const { data, loading, error } = useCustomAPI("https://jsonplaceholder.typicode.com/paosts");
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p style={{ color: "red" }}>Error: {error}</p>;
+  if (error) return <p>{error}</p>;
 
   return (
     <div>

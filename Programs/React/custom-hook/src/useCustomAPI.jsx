@@ -13,7 +13,7 @@ const useCustomAPI = (url) => {
         const response = await axios.get(url);
         setData(response.data);
       } catch (err) {
-        setError('Error Message', err);
+        setError('API Error, Please contact Dev Team', err);
       } finally {
         setLoading(false);
       }
