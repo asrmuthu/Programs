@@ -10,9 +10,9 @@ function App() {
     <div className="App">
       {/* <Increment /> */}
       {/* <Hide_Show /> */}
-      {/* <Timer /> */}
+      <Timer />
 
-      <Todo />
+      {/* <Todo /> */}
     </div>
   );
 }

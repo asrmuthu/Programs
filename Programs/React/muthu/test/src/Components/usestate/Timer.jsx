@@ -1,35 +1,36 @@
+import React from "react";
 import { useState } from "react";
 
-export default function App() {
+const App = () => {
   const [start, setStart] = useState(0);
-  const [intervalId, setIntervalId] = useState(null); // Store interval ID
+  const [timer, setTimer] = useState(null);
 
-  const startTimer = () => {
+  const startCount = () => {
     const id = setInterval(() => {
-      setStart((prevTimer) => prevTimer + 1);
+      setStart((prevCount) => prevCount + 1);
     }, 1000);
 
-    setIntervalId(id); // Store interval ID
+    setTimer(id);
   };
 
-  const stopTimer = () => {
-    setIntervalId(null); // Reset interval ID
+  const stopCount = () => {
+    clearInterval(timer);
+    setTimer(null);
   };
 
-  const resetTimer = () => {
-    setStart(0); // Reset timer value
-    setIntervalId(null); 
+  const resetCount = () => {
+    setStart(0);
+    setTimer(null);
   };
 
   return (
-    <div className="container">
-      <h1>Timer</h1>
-      <span>{start} mins</span>
-      <div>
-        <button onClick={startTimer}>Start</button>
-        <button onClick={stopTimer}>Stop</button>
-        <button onClick={resetTimer}>Reset</button>
-      </div>
+    <div>
+      <p> Timer {start} </p>
+      <button onClick={startCount}>Start</button>
+      <button onClick={stopCount}>Stop</button>
+      <button onClick={resetCount}>Reset</button>
     </div>
   );
-}
+};
+
+export default App;
