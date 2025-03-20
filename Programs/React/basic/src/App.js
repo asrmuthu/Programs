@@ -21,12 +21,14 @@ import Fetchdata from './components/Fetchdata';
 import UseMemo from './components/UseMemo';
 import Login from './components/Login';
 import FileUploadDownload from './components/FileUploadDownload';
+import Increment from './components/Increment';
 
 function App() {
   return (
     <div className="App">
       {/* <Login /> */}
-      <FileUploadDownload />
+      {/* <FileUploadDownload /> */}
+<Increment />      
     </div>
   );
 }

@@ -1,24 +1,18 @@
 import { useState } from "react";
-import "./styles.css";
 
-export default function App() {
-  const [val, setVal] = useState("");
-  const [isAdded, setIsAdded] = useState(false);
+const Increment = () =>  {
+  const [val, setVal] = useState(0);
 
   const increment = () => {
-    setVal(Number(val) + 1);
-    setIsAdded(true);
+    setVal(val + 1);
   };
 
   return (
     <div className="App">
-      <input
-        type="number"
-        value={val}
-        onChange={(e) => setVal(e.target.value)}
-      />
+     {val}
       <button onClick={increment}>Add</button>
-      {isAdded && <p>{val}</p>}
     </div>
   );
 }
+
+export default Increment;
