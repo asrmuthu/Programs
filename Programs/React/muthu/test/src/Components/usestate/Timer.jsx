@@ -9,7 +9,6 @@ const App = () => {
     const id = setInterval(() => {
       setStart((prevCount) => prevCount + 1);
     }, 1000);
-
     setTimer(id);
     return (timer)
   };
