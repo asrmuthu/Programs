@@ -1,42 +1,61 @@
+import React from "react";
 import { useState } from "react";
 
-export default function App() {
-  const [val, setVal] = useState([]); // Store values as an array
-  const [input, setInput] = useState(""); // Store input value separately
+const Todo = () => {
+  const [input, setInput] = useState("");
+  const [items, setItems] = useState([]);
+  const [edit, setEdit] = useState(null);
 
-  const handleChange = (e) => {
-    setInput(e.target.value); // Update input value
-  };
+  const handleAdd = () => {
+    const trimInput = input.trim();
 
-  const Add = () => {
-    if (input.trim() === "") return; // Prevent adding empty values
-    setVal([...val, input]); // Add input to the list
-    setInput(""); // Clear input field
-  };
-
-  const Delete = (index) => {
-    setVal(val.filter((data, i) => i !== index)); // Remove the item at the given index
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      Add(); // Call Add() when Enter key is pressed
+    if (!input || !trimInput) {
+      alert("Please enter the value");
+      return;
     }
+
+    if (edit !== null) {
+      const updateItems = [...items];
+      updateItems[edit] = trimInput;
+      setItems(updateItems);
+      setEdit(null);
+    } else {
+      setItems([...items, input]);
+    }
+
+    setInput("");
   };
 
+  const handleDelete = (index) => {
+    const fileterDel = items.filter((_, i) => i !== index);
+    setItems(fileterDel);
+  };
+
+  const handleEdit = (index) => {
+    setInput(items[index]);
+    setEdit(index);
+  };
 
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <input type="text" value={input} onChange={handleChange} onKeyDown={handleKeyDown} />
-      <button onClick={Add}>Add</button>
-      <ol>
-        {val.map((data, index) => (
+    <div>
+      <input
+        type="text"
+        onChange={(e) => setInput(e.target.value)}
+        value={input}
+      />
+      <button onClick={handleAdd}>{!edit ? "Update" : "Add"}</button>
+      <ol style={{ listStyleType: "none" }}>
+        {" "}
+        {items.map((item, index) => (
           <li key={index}>
-            {data} <button onClick={() => Delete(index)}>Delete</button>
+            {item}
+            <button onClick={() => handleDelete(index)}>Delete</button>
+            <button onClick={() => handleEdit(index)}>Edit</button>
           </li>
         ))}
       </ol>
     </div>
   );
-}
+};
+
+export default Todo;

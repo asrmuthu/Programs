@@ -11,6 +11,7 @@ const App = () => {
     }, 1000);
 
     setTimer(id);
+    return (timer)
   };
 
   const stopCount = () => {
@@ -19,8 +20,10 @@ const App = () => {
   };
 
   const resetCount = () => {
-    setStart(0);
+    clearInterval(timer);
     setTimer(null);
+    setStart(0);
+
   };
 
   return (
