@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FixedSizeList as List } from "react-window";
+import axios from "axios";
 
 const Getting_api_Virtualization = () => {
   const [data, setData] = useState([]);
@@ -8,10 +9,9 @@ const Getting_api_Virtualization = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch(`https://jsonplaceholder.typicode.com/photos?_page=${page}&_limit=100`);
-      const json = await res.json();
+      const res = await axios.get(`https://jsonplaceholder.typicode.com/photos?_page=${page}&_limit=100`);
 
-      if (json.length === 0) {
+      if (res.length === 0) {
         setHasMore(false); // No more data available
       } else {
         setData((prevData) => [...prevData, ...json]); // Append data

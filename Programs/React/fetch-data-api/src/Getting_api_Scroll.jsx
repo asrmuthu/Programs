@@ -8,14 +8,14 @@ function Getting_api_Scroll() {
   const [hasMore, setHasMore] = useState(true);
 
   const fetchData = async () => {
-    const newData = await axios.get(`https://jsonplaceholder.typicode.com/photos?_page=${page}&_limit=100`);
+    const apiName = await axios.get(`https://jsonplaceholder.typicode.com/photos?_page=${page}&_limit=100`);
 
-    if (newData.length === 0) {
-      setHasMore(false);
-      return;
-    }
+    // if (newData.length === 0) {
+    //   setHasMore(false);
+    //   return;
+    // }
 
-    setData(prevData => [...prevData, ...newData]); // ✅ Ensures latest state is used
+    setData(prevData => [...prevData, ...apiName]); // ✅ Ensures latest state is used
     setPage(prevPage => prevPage + 1); // ✅ Update page correctly
   };
 
