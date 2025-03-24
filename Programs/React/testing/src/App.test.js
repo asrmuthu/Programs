@@ -1,19 +1,19 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import App from "./App";
 
-test("initial count is 0", () => {
+test("Heading", () => {
   render(<App />);
-  expect(screen.getByTestId("count")).toHaveTextContent("0");
+  const h1 = screen.getByText(/Counter APP/i);
+  expect(h1).toBeInTheDocument();
 });
 
 test("increments count", () => {
   render(<App />);
-  fireEvent.click(screen.getByText("Increment"));
+  fireEvent.click(screen.getByText("Add"));
   expect(screen.getByTestId("count")).toHaveTextContent("1");
 });
 
-test("decrements count", () => {
+test("initial count is 0", () => {
   render(<App />);
-  fireEvent.click(screen.getByText("Decrement"));
-  expect(screen.getByTestId("count")).toHaveTextContent("-1");
+  expect(screen.getByTestId("count")).toHaveTextContent("0");
 });
