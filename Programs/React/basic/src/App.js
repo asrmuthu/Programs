@@ -23,13 +23,16 @@ import Login from './components/Login';
 import FileUploadDownload from './components/FileUploadDownload';
 import Increment from './components/Increment';
 import PromiseAll from './components/PromiseAll';
+import UseCalback from './components/UseCalback';
+
 
 function App() {
   return (
     <div className="App">
       {/* <Login /> */}
       {/* <FileUploadDownload /> */}
-      <PromiseAll />
+      {/* <PromiseAll /> */}
+      <UseCalback />
     </div>
   );
 }
