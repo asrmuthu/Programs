@@ -17,7 +17,6 @@ const UseMemo = () => {
     };
 
     const memocal = useMemo(() => handleFactorial(number), [number]);
-
     
   return (
     <div>
