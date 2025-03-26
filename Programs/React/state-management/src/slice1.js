@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const createSlice_com = createSlice({
+const slice1 = createSlice({
   name: "customer1",
   initialState: { count: 0 },
   reducers: {
@@ -10,5 +10,5 @@ const createSlice_com = createSlice({
   },
 });
 
-export const { increment } = createSlice_com.actions;
-export default createSlice_com.reducer;
+export const { increment } = slice1.actions;
+export default slice1.reducer;

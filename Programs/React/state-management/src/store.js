@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import createSlice_com from "./createSlice_com";
+import slice1 from "./slice1";
 
 const store = configureStore({
   devTools: true,
   reducer: {
-    customer11: createSlice_com,
+    customer11: slice1,
   },
 });
 

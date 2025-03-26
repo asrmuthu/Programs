@@ -12,10 +12,10 @@ function App() {
     <div className="App">
       {/* <Increment /> */}
       {/* <Hide_Show /> */}
-      {/* <Timer /> */}
+      <Timer />
       {/* <SelectAll /> */}
       {/* <Todo /> */}
-      <RegistrationForm />
+      {/* <RegistrationForm /> */}
     </div>
   );
 }

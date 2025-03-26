@@ -5,9 +5,9 @@ const App = () => {
 
   return (
     <div>
-      <h1>Counter</h1>
-      <h1 data-testid="count">{count}</h1>
-      <button onClick={() => setCount(count + 1)}>Add</button> {/* Button text is "Increment" */}
+      <h1>Count</h1>
+      <h1 data-testid="id1">{count}</h1>
+      <button onClick={() => setCount(count + 1)}>Add</button>
     </div>
   );
 };

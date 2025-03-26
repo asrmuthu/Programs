@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { increment } from "./createSlice_com";
+import { increment } from "./slice1";
 
 const Counter = () => {
   const count = useSelector((state) => state.customer11.count);
