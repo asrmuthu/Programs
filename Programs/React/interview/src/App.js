@@ -4,6 +4,7 @@ import Infogain from './components/Infogain';
 import Synechron from './components/Synechron'
 import Photon from './components/Photon'
 import Synechron1 from './components/Synechron1';
+import Publicismedia from './components/Publicismedia';
 
 
 
@@ -14,8 +15,8 @@ function App() {
       <Cognisent /> */}
       {/* <Synechron /> */}
       {/* <Photon /> */}
-      <Synechron1 />
-
+      {/* <Synechron1 /> */}
+<Publicismedia />
     </div>
   );
 }
