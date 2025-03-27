@@ -14,7 +14,7 @@ const Getting_api_Virtualization = () => {
       if (res.length === 0) {
         setHasMore(false); // No more data available
       } else {
-        setData((prevData) => [...prevData, ...json]); // Append data
+        setData((prevData) => [...prevData, ...res.data]); // Append data
       }
     };
 
