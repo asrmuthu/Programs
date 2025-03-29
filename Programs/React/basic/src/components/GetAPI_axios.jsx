@@ -8,11 +8,12 @@ const GetAPI_axios = () => {
         axios.get('https://jsonplaceholder.typicode.com/users')
         .then(res => {
             setUser(res.data)
+            console.log(res.data);
         })
         .catch((err) => {
           console.log("error", err);
         });
-    })
+    }, [])
     const filteredUsers = user.filter(item => item.id > 5);
   return (
     <div>

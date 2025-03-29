@@ -32,7 +32,8 @@ function App() {
       {/* <Login /> */}
       {/* <FileUploadDownload /> */}
       {/* <PromiseAll /> */}
-      <UseCalback />
+      {/* <UseCalback /> */}
+      <GetAPI_axios />
     </div>
   );
 }
