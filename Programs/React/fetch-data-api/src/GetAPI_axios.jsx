@@ -12,7 +12,7 @@ const GetAPI_axios = () => {
         .catch((err) => {
           console.log("error", err);
         });
-    })
+    }, [])
     const filteredUsers = user.filter(item => item.id > 5);
   return (
     <div>
