@@ -16,16 +16,9 @@ const Capgemini3 = () => {
     fetchAPI();
   }, []);
 
-  // Handle search input change
-  const handleSearchChange = (e) => {
-    setVal(e.target.value);
-  };
-
   // Filter the items based on the search term
   const handleSearch = () => {
-    const filtered = items.filter((item) =>
-      item.title.includes(val)
-    );
+    const filtered = items.filter((item) => item.title === val);
     setItems(filtered);
   };
 
@@ -35,18 +28,15 @@ const Capgemini3 = () => {
       <input
         type="text"
         value={val}
-        onChange={handleSearchChange}
+        onChange={(e) => setVal(e.target.value)}
         placeholder="Search for a product"
       />
       <button onClick={handleSearch}>Search</button>
       <ol>
-        {
-       
-       items.map((item, id) => (
-            <li key={id}>
-              {item.title} - Rating: {item.rating}
-            </li>
-          
+        {items.map((item, id) => (
+          <li key={id}>
+            {item.title} - Rating: {item.rating}
+          </li>
         ))}
       </ol>
     </div>
