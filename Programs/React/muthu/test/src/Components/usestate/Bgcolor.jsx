@@ -8,10 +8,10 @@ const Bgcolor = () => {
     <div style={{ height: "100vh", backgroundColor: color }}>
       <label>Select Background Color: </label>
       <select onChange={(e) => setColor(e.target.value)}>
-        <option value="white">White</option>
-        <option value="red">Red</option>
-        <option value="Yellow">Yellow</option>
-        <option value="green">green</option>
+        <option>White</option>
+        <option>Red</option>
+        <option>Yellow</option>
+        <option>green</option>
       </select>
     </div>
   );
