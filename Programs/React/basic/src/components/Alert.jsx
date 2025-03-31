@@ -4,7 +4,19 @@ import { useState } from 'react';
 const Alert = () =>{
     const [val, setVal] = useState('');
     const click = () => {
-        alert(val);
+        
+  const handleAlert = () => {
+    // Show the confirmation dialog
+    const confirmed = confirm(val);
+
+    if (confirmed) {
+      // If the user clicks "OK", show the next alert
+      alert("Thank you for confirming!");
+    } else {
+      // If the user clicks "Cancel", show a different alert
+      alert("You canceled the action.");
+    }
+  };
         setVal('');
     };
     return (
