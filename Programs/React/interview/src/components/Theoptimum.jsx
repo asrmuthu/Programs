@@ -1,7 +1,7 @@
 import React from 'react'
 import "./App.css"
 
-const Optimum = () => {
+const Theoptimum = () => {
   return (
   <div style={{display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", padding: "20px"}}>
     <p>Muthu</p>
@@ -9,4 +9,4 @@ const Optimum = () => {
   )
 }
 
-export default Optimum
+export default Theoptimum
