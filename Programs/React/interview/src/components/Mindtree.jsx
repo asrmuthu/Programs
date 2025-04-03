@@ -15,10 +15,8 @@ const Mindtree = () => {
   };
 
   const handleCheckboxChange = (index) => {
-    const updatedItems = items.map((item, i) =>
-      i === index ? { ...item, checked: !item.checked } : item
-    );
-    setItems(updatedItems);
+const checkedItems =  items.map((item, i) => i === index ? { ...item, checked: !item.checked } : item)
+      setItems( checkedItems );
   };
 
   return (
