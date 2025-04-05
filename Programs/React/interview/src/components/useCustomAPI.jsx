@@ -3,28 +3,28 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 const useCustomAPI = (url) => {
-const [items, setItems] = useState([]);
-const [error, setError] = useState("");
-const [loading, setLoading] = useState(false);
+  const [items, setItems] = useState([]);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-useEffect(() => {
+  useEffect(() => {
     const API = async () => {
-    setLoading(true);
-    try {
+      setLoading(true);
+      try {
         const FetchData = await axios.get(url);
         console.log(FetchData.data.products);
         setItems(FetchData.data.products);
-    } catch (error) {
+      } catch (error) {
         console.log(error, "Please contact Developers");
-        setError("Please contact Developers");
-    } finally {
+        setError("An error occurred, please contact dev");
+      } finally {
         setLoading(false);
-    }
+      }
     };
     API();
-}, []);
+  }, []);
 
-return { items, error, loading };
+  return { items, error, loading, setItems };
 };
 
 export default useCustomAPI;
