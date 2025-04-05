@@ -7,6 +7,7 @@ import Todo from './Components/usestate/Todo'
 import SelectAll from './Components/usestate/SelectAll';
 import RegistrationForm from './Components/usestate/RegistrationForm';
 import CheckBox from './Components/usestate/CheckBox';
+import Form from './Components/usestate/Form';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       {/* <SelectAll /> */}
       {/* <Todo /> */}
       {/* <RegistrationForm /> */}
-      <CheckBox />
+      {/* <CheckBox /> */}
+      <Form />
     </div>
   );
 }
