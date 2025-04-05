@@ -10,9 +10,7 @@ const GetApi = () => {
 
   const handelChange = (e) => {
     const user = items.find((user) => user.title === e.target.value);
-    if (user) {
-      setVal(user.title);
-    }
+    setVal(user.title);
   };
 
   return (
