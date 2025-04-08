@@ -6,11 +6,10 @@ const Sward2 = () => {
   useEffect(() => {
     // Change "Orange" to "Mango" after 2 seconds
     setTimeout(() => {
-      setItems((prevItems) => {
-        const updatedItems = [...prevItems];
-        updatedItems[1] = "Mango"; // Change the second item (Orange) to Mango
-        return updatedItems;
-      });
+      const val = items.map((item) => (item === "Orange" ? "m" : item));
+
+      setItems(val);
+
     }, 2000); // 2 seconds delay
   }, []);
 

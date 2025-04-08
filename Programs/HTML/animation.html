@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions and Animations Example</title>
+    <style>
+        /* Basic page setup */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Transition Example */
+        .transition-box {
+            width: 200px;
+            height: 200px;
+            background-color: #3498db;
+            transition: background-color 0.5s ease, transform 0.3s ease;
+            margin-bottom: 40px;
+        }
+
+        .transition-box:hover {
+            background-color: #e74c3c;
+            transform: scale(1.1);
+        }
+
+        /* Animation Example */
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+                background-color: #2ecc71;
+            }
+            50% {
+                transform: translateY(-50px);
+                background-color: #f39c12;
+            }
+            100% {
+                transform: translateY(0);
+                background-color: #2ecc71;
+            }
+        }
+
+        .animated-box {
+            width: 200px;
+            height: 200px;
+            background-color: #2ecc71;
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Transition Example Box -->
+    <div class="transition-box"></div>
+
+    <!-- Animation Example Box -->
+    <div class="animated-box"></div>
+
+</body>
+</html>
