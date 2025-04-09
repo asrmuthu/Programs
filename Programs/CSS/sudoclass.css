@@ -25,6 +25,11 @@ h1::first-letter {
  font-size: 38px;
  color: red; 
 }
+
+body {
+    background-image: url("gradient_bg.png");
+    background-repeat: repeat-x;
+  }
 /* 
 h1::after{
     content: 'contant added after';
@@ -32,4 +37,3 @@ h1::after{
 
 h1::before{
     content: 'contant added before'; */
-}
