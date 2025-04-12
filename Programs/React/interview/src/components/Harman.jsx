@@ -5,12 +5,12 @@ const Harman = () => {
   const [debounce, setDebounce] = useState("");
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const id = setTimeout(() => {
       setDebounce(val);
     }, 500);
 
     return () => {
-      clearTimeout(timer);
+      clearTimeout(id);
     };
   }, [val]);
 
