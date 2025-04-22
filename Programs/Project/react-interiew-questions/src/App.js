@@ -3,7 +3,7 @@ import Headers from "./components/pages/Header";
 function App() {
   return (
     <div className="App">
-      <Headers />{" "}
+      <Headers />
     </div>
   );
 }

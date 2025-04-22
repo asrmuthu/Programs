@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Js = () => {
   return (
-    <div>Js</div>
-  )
-}
+    <>
+      <h4>JavaScript Interview Question and Answers</h4>
+    </>
+  );
+};
 
-export default Js
+export default Js;
