@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap');
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 nav {
   background-color: #333;
   padding: 5px 10px;
@@ -30,7 +35,29 @@ h4{
   margin: 2px;
   text-align: center;
   color: #e58e26;
-  background-color: #333;
-  width: fit-content;  
-  display: inline-flex;
+}
+
+.js-1{
+ margin: 5px 5px;
+ display: flex;
+ flex-wrap: wrap;
+}
+.table-container {
+  width: 100%;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+  margin: 5px 20px;
+}
+.table-container th, .table-container td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+.table-container th {
+  background-color: #f2f2f2; /* Optional: Adds a light background to the headers */
 }
