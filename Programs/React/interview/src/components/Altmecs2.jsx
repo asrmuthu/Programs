@@ -1,28 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Altmecs2 = () => {
-  const [val, setVal] = useState('');
+  const [val, setVal] = useState("");
   const [items, setItems] = useState([]);
 
   const handleAdd = () => {
     if (val.trim()) {
-      setItems([...items, { text: val, selected: false }]);
-      setVal('');
+      setItems([...items, { text: val, checked: false }]);
+      setVal("");
     }
-  };
-
-  const toggleSelect = (index) => {
-    setItems(items.map((item, i) =>
-      i === index ? { ...item, selected: !item.selected } : item
-    ));
   };
 
   const deleteItem = (index) => {
     setItems(items.filter((_, i) => i !== index));
   };
 
-  const deleteSelected = () => {
-    setItems(items.filter(item => !item.selected));
+  
+  const handleCheckbox = (index) => {
+    setItems(
+      items.map((item, i) =>
+        i === index ? { ...item, checked: !item.checked } : item
+      )
+    );
+  };
+
+  
+  const deletechecked = () => {
+    setItems(items.filter((item) => !item.checked));
   };
 
   return (
@@ -30,14 +34,14 @@ const Altmecs2 = () => {
       <h3>Todo List</h3>
       <input value={val} onChange={(e) => setVal(e.target.value)} />
       <button onClick={handleAdd}>Add</button>
-      <button onClick={deleteSelected}>Delete Selected</button>
+      <button onClick={deletechecked}>Delete checked</button>
       <ol>
         {items.map((item, index) => (
           <li key={index}>
             <input
               type="checkbox"
-              checked={item.selected}
-              onChange={() => toggleSelect(index)}
+              checked={item.checked}
+              onChange={() => handleCheckbox(index)}
             />
             {item.text}
             <button onClick={() => deleteItem(index)}>X</button>

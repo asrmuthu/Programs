@@ -3,7 +3,6 @@ import React, { useState } from "react";
 const Mindtree = () => {
   const [val, setVal] = useState("");
   const [items, setItems] = useState([]);
-  const [checked, setChecked] = useState(false);
   const handleAdd = () => {
     setItems([...items, { text: val, checked: false }]);
     setVal("");
@@ -14,9 +13,12 @@ const Mindtree = () => {
     setItems(deleteVal);
   };
 
-  const handleCheckboxChange = (index) => {
-const checkedItems =  items.map((item, i) => i === index ? { ...item, checked: !item.checked } : item)
-      setItems( checkedItems );
+  const handleCheckbox = (index) => {
+    setItems(
+      items.map((item, i) =>
+        i === index ? { ...item, checked: !item.checked } : item
+      )
+    );
   };
 
   return (
@@ -36,7 +38,7 @@ const checkedItems =  items.map((item, i) => i === index ? { ...item, checked: !
             <input
               type="checkbox"
               checked={item.checked}
-              onChange={() => handleCheckboxChange(index)}
+              onChange={() => handleCheckbox(index)}
             />
             {item.text}{" "}
             <button onClick={() => handleDelete(index)}>Delete</button>
