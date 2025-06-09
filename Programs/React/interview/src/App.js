@@ -4,10 +4,12 @@ import Photon from './components/Photon';
 import Mindtree from './components/Mindtree';
 import Photon2 from './components/Photon2';
 import Altmecs2 from './components/Altmecs2';
+import Impesis_form_valudation from './components/Impesis_form_valudation';
+import Nextpage_impesis from './components/Nextpage_impesis';
 function App() {
   return (
     <div className="App">
-      <Altmecs2 />
+     <Nextpage_impesis />
     </div>
   );
 }
