@@ -6,10 +6,11 @@ import Photon2 from './components/Photon2';
 import Altmecs2 from './components/Altmecs2';
 import Impesis_form_valudation from './components/Impesis_form_valudation';
 import Nextpage_impesis from './components/Nextpage_impesis';
+import NextPage_impesis_Link from './components/NextPage_impesis_Link';
 function App() {
   return (
     <div className="App">
-     <Nextpage_impesis />
+      <NextPage_impesis_Link />
     </div>
   );
 }
