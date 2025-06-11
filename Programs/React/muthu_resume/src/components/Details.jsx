@@ -5,18 +5,23 @@ return (
     <div className="details">
         <h2>Professional Summary:</h2>
         <p>
-        Experienced software engineer with over 7 years of expertise in front-end technologies. Adept at building scalable and robust applications in both service and product-based environments. Highly committed to continuous professional growth and staying updated with industry trends and technologies. Seeking a challenging role to further enhance skills and contribute to organizational growth.
+        Experienced and results-driven Front-End Lead with 7+ years of experience in designing and building scalable, high-performance web applications using React.js and modern JavaScript frameworks. Proven expertise in leading cross-functional teams, modernizing legacy systems, establishing coding standards, and mentoring developers. Adept at Agile project delivery, client collaboration, and front-end architecture.
         </p>
         <h2>Technical Skills:</h2>
         <p>
             <strong>Primary:</strong> React js<br /><br />
-            <strong>Secondary:</strong> HTML5, CSS3, Antd, JavaScript,TypeScript, Webpack, Hooks, Context API, Redux, DOM, REST API, SQL.<br /><br />
-            <strong>Tools & Technologies:</strong> Git, Github, Visual Studio Code, Azure DevOps, JIRA, Postman, CI/CD, Agile Scrum.
+            <strong>Secondary:</strong> JavaScript, ES6, TypeScript, HTML5, CSS3, Redux, Context API, Hooks, JSX, Virtual DOM, React Router, Jest, Unit Testing, Ant Design, Material-UI, REST API, SQL. <br /><br />
+            <strong>Build & Integration:</strong> Webpack, Babel, Micro Front-End, CI/CD.
+<br /><br />
+             <strong>Cloud & DevOps:</strong> Git, GitHub, JIRA, Azure DevOps, AWS, Docker.
+<br /><br />
+              <strong>Methodologies:</strong> Agile, Scrum, SDLC.<br /><br />
+               <strong>Tools:</strong> Visual Studio Code, Postman, Firebase, MySql WorkBench.<br /><br />
         </p>
         <h2>EXPERIENCE:</h2>
         <section className="experience">
         <p>
-            <strong>Persistent System(Deloitte)- Bangalore</strong><br />
+            <strong>Persistent System- Bangalore</strong><br />
             Engineering Lead<br />
             June 2024 - Present
         </p>
@@ -42,18 +47,21 @@ return (
             BIT Campus, Anna University, Trichy<br />
             2013-2017
         </p>
-        <h2>Project Management:</h2>
+        <h2>Project & Leadership Skills
+:</h2>
         <ul>
-            <li>Agile Methodology</li>
-            <li>Architecture & System Design</li>
+            <li>Team Leadership</li>
+            <li>Front-End Architecture Design</li>
             <li>Project Planning & Execution</li>
-            <li>Scrum Master</li>
+            <li>Scrum Master & Sprint Leadership</li>
+            <li>Cross-functional Team Coordination</li>
+            <li>End-to-End Project Delivery</li>
         </ul>
         <h2>Certifications:</h2>
         <ul>
             <li>NLP -  Machine Learning</li>
         </ul>
-        <h2>My Website:</h2>
+        {/* <h2>My Website:</h2>
         <ul>
             <li><a href='https://resume-muthupandi-raj.web.app/' target='_blank'>My Resume</a></li>
             <li><a href='https://qrcode-genrate.web.app/' target='_blank'>QR Code generated</a></li>
@@ -73,7 +81,7 @@ return (
             <li>Quick learner</li>
             <li>Leadership</li>
             <li>Responsibility</li>
-        </ul>
+        </ul> */}
     </div>
 )
 }
