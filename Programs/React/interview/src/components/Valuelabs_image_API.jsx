@@ -15,13 +15,27 @@ const Valuelabs_image_API = () => {
   }, []);
   return (
     <div>
-      <table>
+      {/* <table>
         <tbody>
           {users.map((item, id) => (
             <tr key={id}>
               <td style={{ border: "1px solid black", padding: "8px" }}>{item.brand}</td>
               <td style={{ border: "1px solid black", padding: "8px" }}>{item.description}</td>
               <td style={{ border: "1px solid black", padding: "8px" }}>
+                <img src={item.images[0]} width="200" />
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table> */}
+
+      <table border="1">
+        <tbody>
+          {users.map((item, id) => (
+            <tr key={id}>
+              <td>{item.brand}</td>
+              <td>{item.description}</td>
+              <td>
                 <img src={item.images[0]} width="200" />
               </td>
             </tr>

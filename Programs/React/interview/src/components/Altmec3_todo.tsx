@@ -3,11 +3,10 @@ import React, { useState } from "react";
 const Altmec3_todo = () => {
   const [val, setVal] = useState("");
   const [items, setItems] = useState([]);
-  const [selected, setSelected] = useState([]);
 
   const handleAdd = () => {
     if (val.trim() === "") return;
-    setItems([...items, val]);
+    setItems([...items, { text: val, checked: false }]);
     setVal("");
   };
 
@@ -16,20 +15,16 @@ const Altmec3_todo = () => {
     setItems(updatedItems);
   };
 
-  const handleSelect = (index) => {
-    setSelected((prev) =>
-      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+  const handleCheckbox = (index) => {
+    setItems(
+      items.map((item, i) =>
+        i === index ? { ...item, checked: !item.checked } : item
+      )
     );
   };
 
-  const selectAll = () => {
-    setSelected(items.map((_, i) => i));
-  };
-
   const deleteSelected = () => {
-    const newItems = items.filter((_, i) => !selected.includes(i));
-    setItems(newItems);
-    setSelected([]);
+    setItems(items.filter((item) => !item.checked))
   };
 
   const deleteAll = () => {
@@ -44,7 +39,6 @@ const Altmec3_todo = () => {
 
       {items.length > 0 && (
         <>
-          <button onClick={selectAll}>Select All</button>
           <button onClick={deleteSelected}>Delete Selected</button>
           <button onClick={deleteAll}>Delete All</button>
         </>
@@ -55,10 +49,10 @@ const Altmec3_todo = () => {
           <li key={index}>
             <input
               type="checkbox"
-              checked={selected.includes(index)}
-              onChange={() => handleSelect(index)}
+              checked={item.checked}
+              onChange={() => handleCheckbox(index)}
             />
-            {item}
+            {item.text}
             <button onClick={() => handleDelete(index)}>Del</button>
           </li>
         ))}
