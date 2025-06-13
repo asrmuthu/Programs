@@ -1,29 +1,17 @@
-import { useState } from 'react';
+import React from "react";
 
-
-const Alert = () =>{
-    const [val, setVal] = useState('');
-    const click = () => {
-        
-  const handleAlert = () => {
-    // Show the confirmation dialog
-    const confirmed = confirm(val);
-
-    if (confirmed) {
-      // If the user clicks "OK", show the next alert
-      alert("Thank you for confirming!");
-    } else {
-      // If the user clicks "Cancel", show a different alert
-      alert("You canceled the action.");
+const App = () => {
+  const handleClick = () => {
+    const conf = window.confirm("Can I proceed");
+    if (conf) {
+      alert("Thank you");
     }
   };
-        setVal('');
-    };
-    return (
-        <div>
-            <input value={val} onChange={(e) => setVal(e.target.value)}/>
-            <button onClick={click}>Click Me</button>
-        </div>
-    );
-}
-export default Alert;
+  return (
+    <div>
+      <button onClick={handleClick}>Click</button>
+    </div>
+  );
+};
+
+export default App;
