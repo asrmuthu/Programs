@@ -5,7 +5,6 @@ const Altmec3_todo = () => {
   const [items, setItems] = useState([]);
 
   const handleAdd = () => {
-    if (val.trim() === "") return;
     setItems([...items, { text: val, checked: false }]);
     setVal("");
   };
