@@ -28,7 +28,6 @@ const Atmecs1 = () => {
         />
         <button onClick={handleSearch}>Search</button>
 
-        {/* Display filtered data in a list */}
         <ul>
           {data.map((item, index) => (
             <li key={index}>{item}</li>
