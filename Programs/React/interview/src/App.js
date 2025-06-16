@@ -8,11 +8,11 @@ import Impesis_form_valudation from './components/Impesis_form_valudation';
 import Nextpage_impesis from './components/Nextpage_impesis';
 import NextPage_impesis_Link from './components/NextPage_impesis_Link';
 import Navigate from './Important/Navigate';
+import API from './Important/API';
 function App() {
   return (
     <div className="App">
-
-      <Navigate />
+      <API />
     </div>
   );
 }

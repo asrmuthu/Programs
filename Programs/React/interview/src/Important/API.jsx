@@ -16,12 +16,26 @@ const API = () => {
   }, []);
 
   const handleSearch = () => {
-    const filtered = items.filter((item) => item.title === val);
+    const filtered = items.filter((item) => item.rating === val);
     setItems(filtered);
   };
 
   return (
     <div>
+      {/* Select */}
+      {/* <div>
+        <select value={val} onChange={(e) => setVal(e.target.value)}>
+          <option value="">Select</option>
+          {items.map((item, index) => (
+            <option key={index}>{item.title} - {item.rating}</option>
+          ))}
+        </select>
+        <p> {val} </p>
+      </div> */}
+
+      
+
+      {/* Search */}
       <div>
         <input
           type="text"
@@ -38,16 +52,24 @@ const API = () => {
           ))}
         </ol>
       </div>
-      <div>
-        <select value={val} onChange={(e) => setVal(e.target.value)}>
-          <option value=""></option>
-          {items.map((item, index) => (
-            <option key={index}>{item.title}</option>
+
+
+      {/* Table */}
+      {/* <div>
+        <table border="1">
+        <tbody>
+          {items.map((item, id) => (
+            <tr key={id}>
+              <td>{item.brand}</td>
+              <td>{item.description}</td>
+              <td>
+                <img src={item.images[0]} width="200" />
+              </td>
+            </tr>
           ))}
-          <option></option>
-        </select>
-        <p> {val} </p>
-      </div>
+        </tbody>
+      </table>
+      </div> */}
     </div>
   );
 };
