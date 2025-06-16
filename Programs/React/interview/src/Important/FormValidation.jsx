@@ -1,31 +1,28 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
-const Impesis_form_valudation = () => {
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
+const FormValidation = () => {
+  const [val, setVal] = useState("");
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    setError(" ");
-    if (!name | !email | !password) {
-      setError("All fields required");
+    if (!val | !email | !password) {
+      setError(" * All fields required");
     } else {
+      setError(" ");
+      setVal(" ");
+      setEmail(" ");
+      setPassword("");
       alert("Submit successfully");
     }
   };
   return (
     <form onSubmit={handleSubmit}>
       <label>Name</label>
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
+      <input type="text" value={val} onChange={(e) => setVal(e.target.value)} />
       <br />
-      <label>Email </label>
+      <label>Email</label>
       <input
         type="email"
         value={email}
@@ -34,14 +31,15 @@ const Impesis_form_valudation = () => {
       <br />
       <label>Password</label>
       <input
-        type="Password"
+        type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
       <br />
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p>{error}</p>}
       <button type="submit">Submit</button>
     </form>
   );
 };
-export default Impesis_form_valudation;
+
+export default FormValidation;
