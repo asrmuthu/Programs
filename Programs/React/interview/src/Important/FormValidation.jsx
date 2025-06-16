@@ -36,6 +36,9 @@ const FormValidation = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <br />
+      <label>File</label>
+      <input type="file" multiple onChange={handleFileChange} />
+      <br />
       {error && <p>{error}</p>}
       <button type="submit">Submit</button>
     </form>
