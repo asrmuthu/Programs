@@ -1,30 +1,29 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useState, useMemo } from "react";
 
 const UseMemo = () => {
-  const [number, setNumber] = useState(0);
+  const [count, setCount] = useState(10);
+  const [arr, setArr] = useState([1, 3, 8, 2, 6]);
 
-  const handleChange = (e) => {
-    setNumber(e.target.value);
+  const handeAdd = () => {
+    setCount(count + 1);
   };
 
-  const handleFactorial = (n) => {
-    let result = 1;
+  function showmax() {
+    return Math.max(...arr);
+  }
+  const handleArr = () => {
+    let random = Math.floor(Math.random() * 100);
+    setArr([...arr, random]);
+  };
 
-    for (let i = 2; i <= n; i++) {
-        result *= i;
-      }
-      return result;
-    };
-
-    const memocal = useMemo(() => handleFactorial(number), [number]);
-    
+  const memval = useMemo(() => showmax(), [arr]);
   return (
     <div>
-      Factorial
-      <input type="number" value={number} onChange={handleChange} />
-      <p>
-        factorial of {number} value is {memocal}
-      </p>
+      <h2>Simple useMemo Example</h2>
+      <p> {count} </p>
+      <button onClick={handeAdd}>Add Value</button>
+      <button onClick={handleArr}>Add arr</button>
+      <p>Max value: {memval} </p>
     </div>
   );
 };
