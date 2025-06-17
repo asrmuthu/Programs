@@ -13,8 +13,7 @@ import App from "./App";
 
 beforeEach(() => {
   global.fetch = jest.fn(() =>
-    Promise.resolve({
-      json: () =>
+    Promise.resolve({json: () =>
         Promise.resolve({
           products: [
             { id: 1, title: "Product A" },
