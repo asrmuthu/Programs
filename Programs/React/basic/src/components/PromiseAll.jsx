@@ -1,51 +1,44 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 function PromiseAll() {
-  const [users, setUsers] = useState([]);
+  const [posts, setPosts] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Async function inside useEffect to fetch users
-    const fetchUsers = async () => {
+    const API = async () => {
       try {
-        // Simulate multiple API requests (e.g., users from different pages)
-        const requests = [
-          axios.get('https://jsonplaceholder.typicode.com/users'),
-          axios.get('https://dummyjson.com/products')
+        const res = [
+          axios.get("https://jsonplaceholder.typicode.com/posts/1"),
+          axios.get("https://jsonplaceholder.typicode.com/posts/2"),
         ];
 
-        // Wait for all requests to resolve with Promise.all
-        const responses = await Promise.all(requests);
-
-        // Use flatMap to flatten and combine the user data from all responses
-        const allUsers = responses.flatMap(response => response.data.users);
-
-        setUsers(allUsers);  // Set the combined and flattened user data
-
+        const prom = await Promise.all(res);
+        const mergeAPI = prom.map((item) => item.data);
+        setPosts(mergeAPI);
+        console.log(mergeAPI);
       } catch (error) {
-        // Handle any errors (e.g., network issues)
-        setError('Failed to fetch users');
-        console.error(error);  // Log the error for debugging
+        setError("Failed to fetch posts");
+        console.error(error);
       }
     };
 
-    fetchUsers();  // Call the async function
+    API();
+  }, []);
 
-  }, []); // Empty dependency array to only run on component mount
-
-  // Show an error message if there is an issue with the request
   if (error) {
     return <div>Error: {error}</div>;
   }
 
-  // Display the fetched users in a list
   return (
     <div>
-      <h1>User List</h1>
+      <h1>Post List</h1>
       <ul>
-        {users.map(user => (
-          <li key={user.id}>{user.name}</li>
+        {posts.map((post) => (
+          <li key={post.id}>
+            <strong>{post.title}</strong>
+            <p>{post.body}</p>
+          </li>
         ))}
       </ul>
     </div>
