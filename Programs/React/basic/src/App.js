@@ -24,6 +24,7 @@ import FileUploadDownload from './components/FileUploadDownload';
 import Increment from './components/Increment';
 import PromiseAll from './components/PromiseAll';
 import UseCalback from './components/UseCalback';
+import InfiniteScrolling from './components/InfiniteScrolling';
 
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
       {/* <FileUploadDownload /> */}
       {/* <PromiseAll /> */}
       {/* <UseCalback /> */}
-      <GetAPI_axios />
+      <InfiniteScrolling />
     </div>
   );
 }
