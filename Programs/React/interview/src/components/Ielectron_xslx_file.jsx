@@ -21,7 +21,7 @@ const SimpleExcelViewer = () => {
   return (
     <div>
       <input type="file" onChange={handleFile} accept=".xlsx, .xls" />
-      <table border="1" style={{ marginTop: "10px" }}>
+      <table border="1">
         <tbody>
           {data.map((row, i) => (
             <tr key={i}>

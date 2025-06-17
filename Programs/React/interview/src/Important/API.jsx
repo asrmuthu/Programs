@@ -6,13 +6,13 @@ const API = () => {
   const [val, setVal] = useState("");
 
   useEffect(() => {
-    const fetchAPI = async () => {
+    const API = async () => {
       const API = await axios.get("https://dummyjson.com/products?limit=100"); //first limit
       console.log(API.data.products);
       setItems(API.data.products.slice(0, 5));
     };
 
-    fetchAPI();
+    API();
   }, []);
 
   const handleSearch = () => {
