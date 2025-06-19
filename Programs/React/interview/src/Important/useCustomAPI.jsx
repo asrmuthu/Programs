@@ -12,6 +12,7 @@ const useCustomAPI = (url) => {
       setLoading(true);
       try {
         const FetchData = await axios.get(url);
+        // const res = await fetch(`${url}?q=${debounce}`); //debounce
         console.log(FetchData.data.products);
         setItems(FetchData.data.products);
       } catch (error) {
