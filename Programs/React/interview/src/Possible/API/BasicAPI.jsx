@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 
 const App = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
     const API = async () => {
-      const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
-      console.log(res.data);
-      setItems(res.data);
+      const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+      const res1 = await res.json();
+      console.log(res1);
+      setItems(res1);
     };
 
     API();
