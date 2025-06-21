@@ -17,7 +17,7 @@ afterEach(() => {
   jest.resetAllMocks();
 });
 
-test("App fetches and displays items", async () => {
+test("App", async () => {
   render(<App />);
 
   // Wait for the expected text to appear
