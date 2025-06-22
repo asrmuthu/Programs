@@ -7,7 +7,7 @@ beforeEach(() => {
     Promise.resolve({
       json: () =>
         Promise.resolve([
-          { id: 1, title: "qui est esse" },
+          { title: "qui est esse" },
         ]),
     })
   );
