@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const App = () => {
   const [val, setVal] = useState("");
@@ -36,6 +36,19 @@ const App = () => {
     handleDel(index);
   };
 
+    // Load items from localStorage on mount
+  useEffect(() => {
+    const s = localStorage.getItem("val");
+    if (s) {
+      setItems(JSON.parse(s));
+    }
+  }, []);
+
+  useEffect(() => {
+    if (items.length > 0) {
+      localStorage.setItem("val", JSON.stringify(items));
+    } 
+  }, [items]);
 
     return (
     <div>
