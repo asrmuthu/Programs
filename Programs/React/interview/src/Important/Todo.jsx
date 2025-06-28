@@ -1,21 +1,21 @@
 import React from "react";
 import { useState } from "react";
 
-const Todo = () => {
+const App = () => {
   const [val, setVal] = useState("");
   const [items, setItems] = useState([]);
 
   const handleAdd = () => {
     setItems([...items, { text: val, checked: false }]);
-    setVal(" ");
+    setVal("");
   };
 
-  const handleDelete = (index) => {
+  const handleDel = (index) => {
     const del = items.filter((_, i) => i !== index);
     setItems(del);
   };
 
-  const handleCheckBox = (index) => {
+  const handleCheckbox = (index) => {
     setItems(
       items.map((item, i) =>
         i === index ? { ...item, checked: !item.checked } : item
@@ -23,25 +23,43 @@ const Todo = () => {
     );
   };
 
-  const handleDeleteSelect = () => {
+  const handleSelect = () => {
     setItems(items.filter((item) => !item.checked));
   };
 
-  return (
+  const DeleteAll = () => {
+    setItems([]);
+  };
+
+  const handleEdit = (index) => {
+    setVal(items[index].text);
+    handleDel(index);
+  };
+
+
+    return (
     <div>
       <input type="text" value={val} onChange={(e) => setVal(e.target.value)} />
       <button onClick={handleAdd}>Add</button>
-      <button onClick={handleDeleteSelect}>Delete Selected</button>
+      <button onClick={handleSelect}>DeleteSelected</button>
+      <button onClick={DeleteAll}>DeleteAll</button>
       <ol>
         {items.map((item, index) => (
-          <li key={index} style={{ color: item.checked ? "red" : "black" }}>
+          <li
+            key={index}
+            style={{
+              color: item.checked ? "red" : "black",
+              textDecoration: item.checked ? "line-through" : "none",
+            }}
+          >
             <input
               type="checkbox"
               checked={item.checked}
-              onChange={() => handleCheckBox(index)}
+              onChange={() => handleCheckbox(index)}
             />
             {item.text}
-            <button onClick={() => handleDelete(index)}>Delete</button>
+            <button onClick={() => handleDel(index)}>Del</button>
+<button onClick={() => handleEdit(index)}>Edit</button>
           </li>
         ))}
       </ol>
@@ -49,4 +67,4 @@ const Todo = () => {
   );
 };
 
-export default Todo;
+export default App;

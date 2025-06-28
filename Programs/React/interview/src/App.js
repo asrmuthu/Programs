@@ -1,7 +1,12 @@
-const obj1 = {name: "muthu", age : 2}
-const obj = Object.entries(obj1);
-console.log(obj) //[ [ 'name', 'muthu' ], [ 'age', 2 ] ]
+import React from 'react'
+import Todo from './Important/Todo.jsx'
 
-const entries = [ [ 'name', 'muthu' ], [ 'age', 2 ] ]
-const obj2 = Object.fromEntries(entries);
-console.log(obj2); // { name: 'muthu', age: 2 }
+const App = () => {
+  return (
+    <div>
+        <Todo />
+    </div>
+  )
+}
+
+export default App
