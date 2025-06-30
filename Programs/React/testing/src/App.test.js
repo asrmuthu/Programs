@@ -3,12 +3,11 @@ import App from "./App";
 
 beforeEach(() => {
   global.fetch = jest.fn(() =>
-    Promise.resolve({json: () =>
-        Promise.resolve({
-          products: [
-            { id: 1, title: "Product A" },
-          ],
-        }),
+    Promise.resolve({
+      json: () =>
+        Promise.resolve([
+          {title: "qui est esse" },
+        ]),
     })
   );
 });
@@ -21,6 +20,6 @@ test("API", async () => {
   render(<App />);
 
   await waitFor(() => {
-    expect(screen.getByText("Product A")).toBeInTheDocument();
+    expect(screen.getByText("qui est esse")).toBeInTheDocument();
   });
 });

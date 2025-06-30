@@ -5,9 +5,9 @@ const App = () => {
 
   useEffect(() => {
     const API = async () => {
-      const res1 = await fetch("https://dummyjson.com/products");
+      const res1 = await fetch("https://jsonplaceholder.typicode.com/posts");
       const res = await res1.json();
-      setItems(res.products);
+      setItems(res);
     };
 
     API();
