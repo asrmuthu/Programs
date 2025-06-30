@@ -6,36 +6,37 @@ function App() {
   const [items2, setItems2] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const requests = [
-        axios.get("https://jsonplacaaholder.typicode.com/users"),
+    const API = async () => {
+      const res = [
+        axios.get("https://jsonplaceholder.typicode.com/users"),
         axios.get("https://jsonplaceholder.typicode.com/posts"),
       ];
 
-      const results = await Promise.allSettled(requests);
-
-      if (results[0].status === "fulfilled") {
-        setItems1(results[0].value.data);
-      }
-      if (results[1].status === "fulfilled") {
-        setItems2(results[1].value.data);
-      }
-
-      // setItems1(results[0].data);
-      // setItems2(results[1].data);
-
-      console.log("Users:", results[0]);
-      console.log("Posts:", results[1]);
+      const prom = await Promise.all(res);
+      console.log(prom[0]);
+      console.log(prom[1]);
+      setItems1(prom[0].data);
+      setItems2(prom[1].data);
     };
 
-    fetchData();
+    API();
   }, []);
 
   return (
     <div>
-      {items2.map((item, index) => (
-        <p key={index}>{item.title}</p>
-      ))}
+      <h1>Users</h1>
+      <ul>
+        {items1.map((user) => (
+          <li key={user.id}>{user.name}</li>
+        ))}
+      </ul>
+
+      <h1>Posts</h1>
+      <ul>
+        {items2.map((post) => (
+          <li key={post.id}>{post.title}</li>
+        ))}
+      </ul>
     </div>
   );
 }

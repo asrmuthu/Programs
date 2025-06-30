@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
+import axios from "axios";
 
 const App = () => {
   const [items, setItems] = useState([]);
@@ -7,14 +8,14 @@ const App = () => {
   const [hasMore, setHasMore] = useState(true);
 
   const API = async () => {
-    const res = await fetch(
-      `https://jsonplaceholder.typicode.com/posts?limit=10&_pages=${page}`
+    const res = await axios.get(
+      `https://jsonplaceholder.typicode.com/posts?limit=20&_pages=${page}`
     );
-    const res1 = await res.json();
-    console.log(res1);
-    setItems((prev) => [...prev, ...res1]);
+    const D = res.data;
+    console.log(D);
+    setItems((prev) => [...prev, ...D]);
     setPage((prev) => prev + 1);
-    if (res1.length < 10) {
+    if (D.length < 10) {
       setHasMore(false);
     }
   };
@@ -28,7 +29,7 @@ const App = () => {
       dataLength={items.length}
       next={API}
       hasMore={hasMore}
-      loader={<p>laoding</p>}
+      loader={<p>loading.............</p>}
     >
       {items.map((item) => (
         <p key={item.id}>{item.title}</p>
