@@ -1,27 +1,47 @@
 import React, { useState } from "react";
 
-const FormValidation = () => {
-  const [val, setVal] = useState("");
+const App = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
+
+  // Password must have at least one lowercase, one uppercase, one number, and be at least 8 characters long
+  const isValidPassword = (pwd) => {
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/
+    return regex.test(pwd);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!val | !email | !password) {
-      setError(" * All fields required");
+
+    if (!name || !email || !password || !confirmPassword) {
+      setError("All fields are required");
+    } else if (!isValidPassword(password)) {
+      setError("Password must be at least 8 characters with lowercase, uppercase, and a number");
+    } else if (password !== confirmPassword) {
+      setError("Passwords do not match");
     } else {
-      setError(" ");
-      setVal(" ");
-      setEmail(" ");
+      alert("Submitted successfully!");
+      setError("");
+      setName("");
+      setEmail("");
       setPassword("");
-      alert("Submit successfully");
+      setConfirmPassword("");
     }
   };
+
   return (
     <form onSubmit={handleSubmit}>
       <label>Name</label>
-      <input type="text" value={val} onChange={(e) => setVal(e.target.value)} />
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
       <br />
+
       <label>Email</label>
       <input
         type="email"
@@ -29,6 +49,7 @@ const FormValidation = () => {
         onChange={(e) => setEmail(e.target.value)}
       />
       <br />
+
       <label>Password</label>
       <input
         type="password"
@@ -36,13 +57,20 @@ const FormValidation = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <br />
-      <label>File</label>
-      <input type="file" multiple onChange={handleFileChange} />
+
+      <label>Confirm Password</label>
+      <input
+        type="password"
+        value={confirmPassword}
+        onChange={(e) => setConfirmPassword(e.target.value)}
+      />
       <br />
-      {error && <p>{error}</p>}
+
+      {error && <p style={{ color: "red" }}>{error}</p>}
+
       <button type="submit">Submit</button>
     </form>
   );
 };
 
-export default FormValidation;
+export default App;
