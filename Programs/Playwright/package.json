@@ -1,0 +1,12 @@
+{
+  "name": "playwright-demo",
+  "version": "1.0.0",
+  "description": "Simple Playwright project",
+  "main": "example.spec.js",
+  "scripts": {
+    "start": "node example.spec.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.53.2"
+  }
+}
