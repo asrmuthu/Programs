@@ -1,2 +1,6 @@
 ipykernel
 numpy
+langchain
+pandas
+python-dotenv
+openai
