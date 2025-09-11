@@ -6,15 +6,11 @@ const Altrimetrik_accotion = () => {
   const [click1, setClick1] = useState(false);
 
   const handleClick = () => {
-    if (!click1) {
       setClick(!click);
-    }
   };
 
   const handleClick1 = () => {
-    if (!click) {
       setClick1(!click1);
-    }
   };
 
   return (
