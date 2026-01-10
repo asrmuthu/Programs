@@ -1,28 +1,27 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from 'react';
 
 const Altrimetrik_accotion = () => {
-  const [click, setClick] = useState(false);
-  const [click1, setClick1] = useState(false);
+  const [findex, setFindex] = useState(null);
+  const data = [
+    { title: 'Heading 1', content: 'aaaaaaa' },
+    { title: 'Heading 2', content: 'bbbbbb' },
+    { title: 'Heading 3', content: 'cccccc' },
+  ];
 
-  const handleClick = () => {
-      setClick(!click);
-  };
-
-  const handleClick1 = () => {
-      setClick1(!click1);
+  const handleClick = (index) => {
+    setFindex(findex === index ? null : index);
   };
 
   return (
     <div>
-      <div>
-        <h1 onClick={handleClick}>heading1</h1>
-        {click && <p>aaaaaaaaaaaaaa</p>}
-      </div>
-      <div>
-        <h1 onClick={handleClick1}>heading2</h1>
-        {click1 && <p>bbbbbbbbbbbbbbb</p>}
-      </div>
+      {data.map((item, index) => (
+        <div key={index}>
+          <h3 onClick={() => handleClick(index)} style={{ cursor: 'pointer' }}>
+            {item.title}
+          </h3>
+          {findex === index && <p>{item.content}</p>}
+        </div>
+      ))}
     </div>
   );
 };

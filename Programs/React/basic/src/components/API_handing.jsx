@@ -18,16 +18,20 @@ const API_handing = () => {
   }, []);
 
   return (
-    <div>
-      <p>Product Reviews</p>
-      <ol>
-        {items.map((item, id) =>
-          item.reviews.filter((rew) => rew.rating > 3).map((filteredReview, index) => (
-              <li key={index}>{filteredReview.reviewerName}</li>
-            ))
-        )}
-      </ol>
+    
+
+     // "tags": [
+    //     "beauty",
+    //     "mascara"
+    //   ],
+
+     <div>
+      {items.map((item, id) => (
+        <p key={id}>{item.tags.join(" ")}</p>
+      ))}
     </div>
+
+   
   );
 };
 

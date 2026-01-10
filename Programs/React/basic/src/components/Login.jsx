@@ -1,35 +1,29 @@
-import React, { useState } from 'react'
+import React from "react";
+import { useState, useEffect } from "react";
 
-const Login = () => { 
-const [email, setEmail] = useState('')
-const [pass, setPass] = useState('')
-const [message, setMessage] = useState('')
+const App = () => {
+  const [val, setVal] = useState("");
+  const [pass, setPass] = useState("");
 
-const handleLogin = () =>{
-    setMessage('Loading')
-    if (email == '1@gamil.com' && pass == '123'){
-        
-        setTimeout(() => {
-            setMessage('Login successfully')
-        }, 1000 )
-        
-    }
-    else{
-        setTimeout(() => {
-            setMessage('Login failed')
-        }, 1000 )
-    }
-
-}
+  const handleCick = () => {
+    alert("Login SuccessFully");
+    setVal(" ");
+    setPass(" ");
+  };
 
   return (
     <div>
-        <input type='email' placeholder='Enter the Email' onChange={(e) => setEmail(e.target.value)}/><br/>
-        <input type='password' placeholder='Enter the Password' onChange={(e) => setPass(e.target.value)}/><br/>
-        <button onClick={handleLogin}>Login</button>
-        {message !== '' && <p>{message}</p>} 
+      User Name
+      <input type="text" value={val} onChange={(e) => setVal(e.target.value)} />
+      Passowrd{" "}
+      <input
+        type="password"
+        value={pass}
+        onChange={(e) => setPass(e.target.value)}
+      />
+      <button onClick={handleCick}>Login</button>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default App;

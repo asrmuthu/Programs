@@ -10,14 +10,12 @@ import Date from './components/Date';
 import FunctionCalling from './components/FunctionCalling';
 import EventFunction from './components/EventFunction';
 import ArrayMap from './components/ArrayMap';
-import ArrayMapUsestate from './components/ArrayMapUsestate';
 import SimpleUseState from './components/SimpleUseState';
 import SimpleUseState2 from './components/SimpleUseState2';
 import MediumUseState from './components/MediumUseState';
 import Use_effact from './components/Use_effact';
 import { Axios } from 'axios';
 import ColorChange from './components/ColorChange';
-import Fetchdata from './components/Fetchdata';
 import UseMemo from './components/UseMemo';
 import Login from './components/Login';
 import FileUploadDownload from './components/FileUploadDownload';
@@ -31,10 +29,10 @@ function App() {
   return (
     <div className="App">
       {/* <Login /> */}
-      {/* <FileUploadDownload /> */}
+      <FileUploadDownload />
       {/* <PromiseAll /> */}
       {/* <UseCalback /> */}
-      <InfiniteScrolling />
+      {/* <InfiniteScrolling /> */}
     </div>
   );
 }

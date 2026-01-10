@@ -14,7 +14,6 @@ const InfiniteScrolling = () => {
     const newData = res.data;
     setItems((prev) => [...prev, ...newData]);
     setPage((prev) => prev + 1);
-
   };
 
   useEffect(() => {
@@ -22,7 +21,7 @@ const InfiniteScrolling = () => {
 
   return (
     <div>
-      <h2>📜 Infinite Scroll (react-infinite-scroll-component)</h2>
+      <h2>Infinite Scroll</h2>
       <InfiniteScroll
         dataLength={items.length}
         next={API}

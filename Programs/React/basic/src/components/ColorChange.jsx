@@ -1,19 +1,15 @@
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const ColorChange = () => {
   const [color, setColor] = useState("red");
 
   useEffect(() => {
-    setTimeout(() => {
-      setColor("blue");
-    }, 3000);
+    const timer = setTimeout(() => setColor("blue"), 3000);
+
+    return () => clearTimeout(timer);
   }, []);
 
-  return (
-    <div style={{height: "100vh", backgroundColor: color }}>
-      
-    </div>
-  );
+  return <div style={{ backgroundColor: color, height: "100vh" }}></div>;
 };
 
 export default ColorChange;
