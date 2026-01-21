@@ -26,13 +26,13 @@ const InfiniteScrolling = () => {
         dataLength={items.length}
         next={API}
         hasMore={hasMore}
+        loader={<h4>Loading...</h4>}
       >
         {items.map((item) => (
           <div
             key={item.id}
           >
             <h4>{item.title}</h4>
-            <p>{item.body}</p>
           </div>
         ))}
       </InfiniteScroll>
