@@ -8,22 +8,22 @@ const UseMemo = () => {
     setCount(count + 1);
   };
 
-  function showmax() {
+  const showmax = () => {
+    console.log("Max value calculating...");
     return Math.max(...arr);
-  }
-  const handleArr = () => {
-    let random = Math.floor(Math.random() * 100);
-    setArr([...arr, random]);
   };
 
-  const memval = useMemo(() => showmax(), [arr]);
+  const memoVal = useMemo(() => {
+    return showmax();
+  }, [arr]);
+
   return (
     <div>
       <h2>Simple useMemo Example</h2>
-      <p> {count} </p>
       <button onClick={handeAdd}>Add Value</button>
-      <button onClick={handleArr}>Add arr</button>
-      <p>Max value: {memval} </p>
+      <p>{count}</p>
+      {/* <p>{showmax()} </p> */}
+      <p>{memoVal}</p>
     </div>
   );
 };
