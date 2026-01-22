@@ -1,35 +1,30 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect, useMemo } from "react";
 
-// ✅ Memoized Child Component
-const Child = React.memo(({ onClick }) => {
+const Child = React.memo(({ handleAdd }) => {
   console.log("👶 Child Rendered");
-  return <button onClick={onClick}>Increment</button>;
+  return <button onClick={handleAdd}>Add</button>;
 });
 
 const App = () => {
   const [count, setCount] = useState(0);
   const [text, setText] = useState("");
 
-  // ✅ Memoize the function to avoid unnecessary re-renders in Child
-  const increment = useCallback(() => {
+  const handleAdd = useCallback(() => {
     setCount((prev) => prev + 1);
-  }, []);
+  }, [count]);
 
   console.log("🏠 Parent Rendered");
 
   return (
     <div>
-      <h2>useCallback + React.memo Example</h2>
-
       <input
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Type something"
       />
 
       <p>Count: {count}</p>
-      <Child onClick={increment} />
+      <Child handleAdd={handleAdd} />
     </div>
   );
 };
