@@ -5,25 +5,32 @@ return (
     <div className="details">
         <h2>Professional Summary:</h2>
         <p>
-        Experienced and results-driven Front-End Lead with 7+ years of experience in designing and building scalable, high-performance web applications using React.js and modern JavaScript frameworks. Proven expertise in leading cross-functional teams, modernizing legacy systems, establishing coding standards, and mentoring developers. Adept at Agile project delivery, client collaboration, and front-end architecture.
+        Frontend Lead with 8+ years of experience driving end-to-end web
+development and frontend excellence. Proven track record of
+architecting and delivering scalable, high-performance, secure web
+platforms from concept to production and derived UI/UX excellence
+and build highly scalable frontend applications. Expert in building
+and leading high-impact frontend teams, designing enterprisegrade UI systems, and shaping long-term architectural strategy.
+Recognized for mentoring engineers, influencing cross-functional
+stakeholders, and translating business vision into robust technical
+solutions and Passionate about continuous learning, innovation, and
+leading digital transformation at scale
         </p>
         <h2>Technical Skills:</h2>
         <p>
-            <strong>Primary:</strong> React js<br /><br />
-            <strong>Secondary:</strong> JavaScript, ES6, TypeScript, HTML5, CSS3, Redux, Context API, Hooks, JSX, Virtual DOM, React Router, Jest, Unit Testing, Ant Design, Material-UI, REST API, SQL. <br /><br />
-            <strong>Build & Integration:</strong> Webpack, Babel, Micro Front-End, CI/CD.
-<br /><br />
-             <strong>Cloud & DevOps:</strong> Git, GitHub, JIRA, Azure DevOps, AWS, Docker.
-<br /><br />
-              <strong>Methodologies:</strong> Agile, Scrum, SDLC.<br /><br />
-               <strong>Tools:</strong> Visual Studio Code, Postman, Firebase, MySql WorkBench.<br /><br />
+            <strong>Technologies:</strong> React js, JavaScript, ES6, TypeScript, HTML5, CSS3, Redux, Context API, Hooks, JSX, Virtual DOM, React Router, Jest, Unit Testing, Ant Design, Material-UI, REST API, SQL, Webpack, Babel, Micro Front-End, CI/CD, Next.js, Python, Git, GitHub, JIRA, Azure DevOps, AWS, Docker, Agile, Scrum, SDLC, Visual Studio Code, Postman, Firebase, MySql WorkBench, SonarQube, Lighthouse, Figma.<br /><br />
         </p>
         <h2>EXPERIENCE:</h2>
         <section className="experience">
+            <p>
+            <strong>Synechron Technologies- Bangalore</strong><br />
+            Engineering Lead<br />
+            July 2025 - Present
+        </p>
         <p>
             <strong>Persistent System- Bangalore</strong><br />
             Engineering Lead<br />
-            June 2024 - Present
+            June 2024 - July 2025
         </p>
         <p>
             <strong>TNQ TECH - Chennai</strong><br />
@@ -59,7 +66,8 @@ return (
         </ul>
         <h2>Certifications:</h2>
         <ul>
-            <li>NLP -  Machine Learning</li>
+            <li>Advanced React</li>
+             <li>Agentic AI</li>
         </ul>
         {/* <h2>My Website:</h2>
         <ul>

@@ -1,6 +1,6 @@
 import React from "react";
 import muthu_image from "../muthu_image.jpg";
-import resume from "../Muthupandi_raj_resume.pdf";
+import resume from "../Muthupandi_Raj_React_Tech_Lead.pdf";
 import { GrLocation } from "react-icons/gr";
 import { FaMobileRetro } from "react-icons/fa6";
 import { AiFillMail } from "react-icons/ai";
@@ -12,7 +12,7 @@ const Header = () => {
 const download = () => {
     const link = document.createElement("a");
     link.href = resume;
-    link.download = "Muthupandi_Raj_Resume.pdf";
+    link.download = "Muthupandi_Raj_React_Tech_Lead.pdf";
     link.click();
 };
 
@@ -35,7 +35,7 @@ return (
                 <div className="contact-info">
                     <a href="https://www.google.com/maps/dir//2GRC%2BMFX+Dr+Renuka+house,+Ammapuram,+Vadaveeranaickenpatty,+Tamil+Nadu+625531/@10.0417768,77.5218165,18z/data=!4m9!4m8!1m0!1m5!1m1!1s0x3b076b32cf3f47df:0xf75546fba35fd7c5!2m2!1d77.5212575!2d10.0417723!3e0?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">
                         <GrLocation />
-                        Theni, Tamil Nadu, India.
+                        Karur, Tamil Nadu, India.
                     </a>
                     <a href="tel:7904688429">
                         <FaMobileRetro />
