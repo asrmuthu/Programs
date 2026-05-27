@@ -1,6 +1,6 @@
 import React from "react";
 import muthu_image from "../muthu_image.jpg";
-import resume from "../Muthupandi_Raj_React_Tech_Lead.pdf";
+import resume from "../Muthupandi_Raj_Resume.pdf";
 import { GrLocation } from "react-icons/gr";
 import { FaMobileRetro } from "react-icons/fa6";
 import { AiFillMail } from "react-icons/ai";
@@ -12,7 +12,7 @@ const Header = () => {
 const download = () => {
     const link = document.createElement("a");
     link.href = resume;
-    link.download = "Muthupandi_Raj_React_Tech_Lead.pdf";
+    link.download = "Muthupandi_Raj_Resume.pdf";
     link.click();
 };
 
@@ -24,7 +24,7 @@ return (
                 <h1>Muthupandi Raj</h1>
                 <h2>Engineering Lead</h2>
                 <div className="social">
-                    <a href="https://www.linkedin.com/feed/">
+                    <a href="https://www.linkedin.com/in/muthu-r-287392207/">
                         <AiFillLinkedin />
                     </a>
                     <a href="https://github.com/asrmuthu/Programs/tree/main/Programs">
@@ -41,9 +41,9 @@ return (
                         <FaMobileRetro />
                         7904688429
                     </a>
-                    <a href="mailto:asrmuthu57@gmail.com">
+                    <a href="mailto:muthupandiraj1911@gmail.com">
                         <AiFillMail />
-                        asrmuthu57@gmail.com
+                        muthupandiraj1911@gmail.com
                     </a>
                 </div>
                 <button onClick={download}><AiOutlineDownload />Download</button>
