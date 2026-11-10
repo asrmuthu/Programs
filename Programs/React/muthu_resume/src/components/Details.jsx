@@ -174,10 +174,7 @@ const websites = [
     { title: 'Chatbot', url: 'https://aspire-ai-chatbot.web.app/' },
     { title: 'QR Code Generator', url: 'https://qrcode-genrate.web.app/' },
     { title: 'Weather', url: 'https://weather-allcity.web.app/' },
-    { title: 'Indian Government Questions & Answers', url: 'https://indian-gov-exam-questions.web.app/' },
-    { title: 'MaxTaxi Theni', url: 'https://maxtaxitheni.in/' },
     { title: 'BMI Calculator', url: 'https://bmi-calcul.web.app/' },
-    { title: 'User Card', url: 'https://user-card-muthu.web.app/' },
     { title: 'Currency Converter', url: 'https://currency-convert-all.web.app/' },
     { title: 'Bhive Workspace App', url: 'https://bhiveworkspace-muthupandi.web.app/' },
 ]
