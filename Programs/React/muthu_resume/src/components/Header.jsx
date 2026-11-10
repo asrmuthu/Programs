@@ -9,48 +9,53 @@ import { AiFillGithub } from "react-icons/ai";
 import { AiOutlineDownload } from "react-icons/ai";
 
 const Header = () => {
-const download = () => {
-    const link = document.createElement("a");
-    link.href = resume;
-    link.download = "Muthupandi_Raj_Resume.pdf";
-    link.click();
-};
+    const download = () => {
+        const link = document.createElement("a");
+        link.href = resume;
+        link.download = "Muthupandi_Raj_Resume.pdf";
+        link.click();
+    };
 
-return (
-    <div>
-        <header className="header">
-            <hgroup className="hgroup">
-                <img src={muthu_image} className="muthu_image" alt="logo" />
+    return (
+        <aside className="profile-sidebar">
+            <header className="profile-card">
+                <img src={muthu_image} className="muthu_image" alt="Muthupandi Raj" />
+                <p className="profile-kicker">PORTFOLIO · 2026</p>
                 <h1>Muthupandi Raj</h1>
-                <h2>Engineering Lead</h2>
+                <p className="profile-role">Frontend Engineering Lead</p>
+                <p className="profile-location"><GrLocation /> Tamil Nadu, India</p>
                 <div className="social">
-                    <a href="https://www.linkedin.com/in/muthu-r-287392207/">
+                    <a href="https://www.linkedin.com/in/muthu-r-287392207/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
                         <AiFillLinkedin />
                     </a>
-                    <a href="https://github.com/asrmuthu/Programs/tree/main/Programs">
+                    <a href="https://github.com/asrmuthu/Programs/tree/main/Programs" target="_blank" rel="noreferrer" aria-label="GitHub">
                         <AiFillGithub />
                     </a>
                 </div>
-                <p className="context">CONTACT:</p>
                 <div className="contact-info">
-                    <a href="https://www.google.com/maps/dir//2GRC%2BMFX+Dr+Renuka+house,+Ammapuram,+Vadaveeranaickenpatty,+Tamil+Nadu+625531/@10.0417768,77.5218165,18z/data=!4m9!4m8!1m0!1m5!1m1!1s0x3b076b32cf3f47df:0xf75546fba35fd7c5!2m2!1d77.5212575!2d10.0417723!3e0?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">
-                        <GrLocation />
-                        Karur, Tamil Nadu, India.
-                    </a>
                     <a href="tel:7904688429">
                         <FaMobileRetro />
-                        7904688429
+                        <span>7904688429</span>
                     </a>
                     <a href="mailto:muthupandiraj1911@gmail.com">
                         <AiFillMail />
-                        muthupandiraj1911@gmail.com
+                        <span>muthupandiraj1911@gmail.com</span>
                     </a>
                 </div>
-                <button onClick={download}><AiOutlineDownload />Download</button>
-            </hgroup>
-        </header>
-    </div>
-);
+                <button className="download-button" onClick={download}>
+                    <AiOutlineDownload /> Download resume
+                </button>
+                <nav className="profile-nav" aria-label="Resume sections">
+                    <a href="#highlights">Highlights</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#websites">Websites</a>
+                    <a href="#more">Education & more</a>
+                </nav>
+            </header>
+        </aside>
+    );
 };
 
 export default Header;
